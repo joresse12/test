@@ -1,0 +1,4242 @@
+/* font-family poppins importieren */
+@import url('https://fonts.cdnfonts.com/css/poppins');
+
+
+:root{
+    --primary :rgb(72, 222, 18);
+    --secondray:#000;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", "sans-serif";
+    box-sizing: border-box;
+    transition: all.2s linear;
+    text-decoration: none;
+    border:none;
+}
+
+a i{
+    font-size: 3.2em;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 7em;
+    scroll-behavior:smooth;
+}
+
+body{
+    position: relative;
+    overflow-x: hidden;
+}
+
+header{
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #fff;
+    position: sticky;
+    display: flex;
+    align-items: center;
+    padding: 10px 8%;
+    min-width: 375px;
+    min-height: 80px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+header ul{
+    display: flex;
+    flex-direction: column;
+}
+header li {
+    list-style: none;
+}
+header .fa-xmark,.fa-bars{
+    display: block;
+    font-size: 25px;
+}
+header .fa-bars{
+    padding-left: 20px;
+    align-items: flex-end;
+}
+header ul{
+    background:var(--primary);
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 20px;
+    z-index: 2;
+    transition: right 0.5s;
+
+}
+
+header ul li{
+    display: block;
+    margin: 25px;
+}
+header ul .fa-xmark{
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    cursor: pointer;
+    color:#fff;
+}
+
+.logo{
+    font-size: 7px;
+    color: #fff;
+    background-color: #000;
+    padding: 5px 8px;
+    font-style: italic;
+}
+.logo a{
+    color: #fff;
+}
+.logo span{
+    color: var(--primary);
+}
+
+.search{
+    display: flex;
+}
+
+#searchfield-header-input{
+    display: flex;
+    width: 100%;
+    line-height: 1.6;
+    height: 5.2rem;
+    color: #19161699;
+    background-color: #fff;
+    border-width: 1px 0px 1px 1px;
+    border-top: solid #9d9292;
+    border-bottom: solid #9d9292;
+    border-left: solid #9d9292;
+    border-radius: 5px 0px 0px 5px;
+    padding: 2.0rem 2.6rem;
+    visibility: hidden;
+    
+}
+.search .button_reset_search{
+    border-width: 1px 0px 1px 1px;
+    border-top: solid #9d9292;
+    border-bottom: solid #9d9292;
+    padding: 1.2rem 1.6rem;
+    visibility: hidden;
+}
+.button_search{
+    border-width: 1px 0px 1px 1px;
+    border-top: solid transparent;
+    border-bottom: solid transparent;
+    border-radius: 0px 5px 5px 0px;
+    background-color: rgb(222, 18, 18);
+    padding: 10px 1.6rem;
+}
+
+.class{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    transition: 0.2s;
+}
+
+.class span.te{
+    margin-left: 10px;
+}
+
+header a.class:hover{
+    font-weight: bold;
+    color: #4a4545;
+    transform: scale(1.2);
+}
+header a.class:checked{
+    color: #4a4545;
+    transform: scale(1.2);
+}
+header a.class:active{
+    color: #4a4545;
+    transform: scale(1.2);
+}
+
+.choose_circle{                 /*cicrcle for the merkzettel and warenkorb on the header*/
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.choose_circle span.circle{             /*pour le nombre dans le cercle au debut cest 0*/
+    background-color:#4a4545;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    top: 12px;
+    right:12px;
+    border-radius: 50%;
+    padding:2px 7px;
+}
+
+
+/* css of the warenKorb and his elements */
+header .WarenkorbList{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width: 250px;
+    height: 100vh;
+    background-color: #fff;
+    color: #fff;
+    z-index: 100;
+    top: 0px;
+    left: 100%;
+    transition: all 0.3s ease;
+}
+
+
+.delete-btn{            /* created by our javascript-code , for delete an element in cart shoping */
+    margin:5px 2px 10px 7px;
+    font-size: 1.2rem;
+    color: #000;
+    cursor: pointer;
+}
+
+header .WarenkorbList .warenkorb_title{
+    color: #fff;
+    padding: 20px;
+    background: #000;
+    font-size: 1.5rem;
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+header .WarenkorbList img{
+    width: 50%;
+}
+
+header .WarenkorbList .elemWarenkorb{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: inherit;
+    height: 80%;
+}
+
+header .WarenkorbList .gotoKasse{
+    background-color: #200883;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin:25px 0;
+    font-size: 18px;
+    cursor: pointer;
+}
+header .WarenkorbList .gotoKasse i{
+    font-size: 17px;
+}
+
+
+/* css of elements in cart shopping. Created by our javascript-code */
+.elemWarenkorb .Produkt{
+    display: flex;
+    flex-direction: row;
+    background-color: #99f083;
+}
+.elemWarenkorb .Produkt .allImages{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+.elemWarenkorb .Produkt .produktTop{
+    width: 70%;
+    margin-right: 3px;
+    z-index: 130;
+}
+.elemWarenkorb .Produkt .produktShort{
+    width: 50%;
+    margin-top: -9px;
+}
+.elemWarenkorb .Produkt .produktSocket{
+    width: 50%;
+}
+.elemWarenkorb .Produkt .descriptionProdukt{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    align-items: center;
+    color: #000;
+}
+.elemWarenkorb .Produkt .descriptionProdukt h1{
+    font-size: 13px;
+}
+
+
+
+/* footer css */
+footer{
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    background-color: #200883;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 8%;
+    min-width: 375px;
+    min-height: 800px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+footer .top{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+
+footer .logo{
+    width: 100px;
+    margin-bottom: 10px;
+}
+footer .user_ort{
+    width: 100px;
+    background-color: #130355;
+    color :#fff;
+    text-align: center;
+    padding: 11px 5px;
+    cursor: pointer;
+}
+
+footer .list li{
+    list-style: none;
+    margin: 20px 0px;
+}
+
+footer .list a{
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    transition: 0.2s;
+}
+
+footer .list a:hover{
+    text-decoration: underline;
+}
+
+footer .title{
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 8px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+footer .col{
+    margin-top: 30px;
+    margin-right: 70px;
+}
+
+/*--------------- mittelere row des Footers------------- */
+footer .mittel{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+footer .mittel h1{
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 15px;
+}
+footer .mittel #email_abo_input{
+    padding:1.8rem 1.9rem;
+    margin-right: -3px;
+}
+footer .mittel .button_validate{
+    padding:1.8rem 1.9rem;
+    background-color: #eda73f;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+footer .mittel ul{
+    display: flex;
+}
+
+footer .mittel .list_media li{
+    list-style: none;
+    margin: 20px 0px;
+    border-radius: 50%;
+    background-color: #130355;
+    padding: 10px 10px;
+    margin-right: 5px;
+    text-align: center;
+}
+
+footer .mittel a i{
+    font-size: 18px;
+    font-weight: 500;
+    color: #fff;
+    transition: 0.2s;
+}
+
+/* ----------------bottom_footer-------------- */
+footer .bottom_footer{
+    color:#fff ;
+    font-size: 12px;
+    font-weight: 300;
+}
+footer .bottom_footer .utitaet{
+    margin-bottom: 20px;
+}
+footer .bottom_footer .utitaet ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+footer .bottom_footer li{
+    text-transform: capitalize;
+    list-style: none;
+    margin-right: 20px;
+    
+}
+footer .bottom_footer li a{
+    color:#fff;
+    transition: 0.2s;;
+}
+footer .bottom_footer li a:hover{
+    text-decoration: underline;
+}
+footer .copyright{
+    display: flex;
+    flex-wrap: wrap;
+}
+/*----------------- End footer----------------------- */
+
+
+/* -----------------Scrollbar CSS----------------- */
+::-webkit-scrollbar{
+    width: 5px;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(222, 18, 18);
+}
+::-webkit-scrollbar-track-piece{
+    background-color: black;
+}
+/*---------------- End Scrollbar------------- */
+
+
+
+section{
+    display: grid;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    height: auto;
+    min-width: 375px;
+    padding: 0 8%;
+}
+
+/*-------------- home section------------- */
+#home .werbung{
+    grid-row: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("https://images.midilibre.fr/api/v1/images/view/6373b181a313e112c76bba58/large/image.png?v=1");
+    background-position: center;
+    height:200px;
+    margin-bottom: 50px;
+
+
+    -webkit-animation-name: diapo;
+    -webkit-animation-duration: 9s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+
+    -moz-animation-name: diapo;
+    -moz-animation-duration: 9s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction: normal;
+
+    animation-name: diapo;
+    animation-duration: 9s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+#home .werbung p{
+    position: absolute;
+    top: 100px;
+    text-align: center;
+    color: #fff;
+    background-color: #000;
+    padding: 10px;
+}
+#home .werbung p span{
+    font-style: italic;
+}
+
+
+
+#home .beschreib{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    color: #fff;
+}
+#home .beschreib .left{
+    grid-row: 2;
+    background-image: url("https://img.redbull.com/images/c_limit,w_1500,h_1000,f_auto,q_auto/redbullcom/2019/04/11/5e080104-9903-47d4-a8bf-2e05393597ca/vestiaire-football-couleur-bleu");
+    background-size: cover;
+}
+#home .beschreib .left p{
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+#home .beschreib .left h1{
+    font-size: 19px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+#home .beschreib .left p:last-child{
+    font-weight: bold;
+}
+#home .beschreib .left .shopen{
+    align-items: center;
+    text-align: center;
+}
+#home .beschreib .left .shopen .jetztShopen{
+    padding: 15px 0px;
+    margin:0px 55px;
+    background: transparent;
+    border: 2px solid #12fcf8;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+#home .beschreib .left .shopen .jetztShopen:hover{
+    background-color: #12fcf8;
+}
+
+#home .beschreib .right{
+    grid-row: 1;
+    background-image: url("images/soocer-removebg-preview.png");
+    background-size: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#home .beschreib .right img{
+    width: 100%;
+}
+
+
+/* ------------------------section build--------------------- */
+.section_title{
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    font-size: 20px;
+    margin-bottom: 50px;
+}
+.section_title::before{                     /*a green bands on a titles of each sections*/
+    position: absolute;
+    left: 60px;
+    bottom: 0;
+    content: "";
+    background-image: url("images/meadow-g977fbba76_1280.jpg");
+    background-size: cover;
+    width: 20%;
+    height: 5px;
+    border-radius: 6px;
+}
+.section_title::after{
+    position: absolute;
+    top:0;
+    left: 180px;
+    content: "";
+    background-image: url("images/meadow-g977fbba76_1280.jpg");
+    background-size: cover;
+    width: 20%;
+    height: 5px;
+    border-radius: 6px;
+}
+
+#build .bau{
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+}
+#build .bau figure{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background-color: #efebeb; 
+    border-radius: 15px;   
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    margin:20px;
+    cursor: pointer;
+}
+#build .bau figure img{
+    grid-column: 1;
+    width: 70%;
+}
+#build .bau figure .neu{
+    grid-column: 2;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 10px 15px;
+}
+#build .bau figure .neu h2{
+    grid-row: 1;
+    font-size: 15px;
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 20px;
+}
+#build .bau figure .neu i{
+    grid-row: 2;
+    font-size: 15px;
+    border:1px solid #fff;
+    border-radius: 50%;
+    padding:15px 15px;
+    background-color: #eda73f;
+    color:#fff
+}
+
+/*--------------------------------- css section fragen -------------------------*/
+
+#Fragen{
+    position: relative;
+}
+
+
+#Fragen .config{
+    transition: 0.5s ease;
+}
+
+
+#Fragen .fragen{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+#Fragen .fragen span{
+    font-size: 18px;
+}
+#Fragen .fragen span i{
+    color: #4a4545;
+}
+
+#Fragen .icon-chevron{
+    transition: all 0.3s ease;
+}
+
+.fragen > span{
+    text-align: left;
+    font-weight: bold;
+}
+#Fragen .textvon p{
+    font-size: 12px;
+    visibility: hidden;
+}
+#Fragen .textvon,.imagesvon{
+    text-align: center;
+    align-items: center;
+    height: 0px;
+    padding: 7px;
+}
+
+#Fragen .imagesvon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#Fragen .imagesvon img{
+    width: 20%;
+    height: 40%;
+}
+
+#Fragen .ligne{
+    width: 100%;
+    height:1px;
+    background-color: #605f5f;
+}
+
+
+/*---------------------- zahl der Bestellungen in index.html css ------------------*/
+
+#bestellungen_zahl .box{
+    position: relative;
+    color:#130355;
+    cursor: pointer;
+    transition:/*transform*/ 0.5s cubic-bezier(0.23,1.83,0.42,1.19);   /*help to do a ease-in and ease-out. more the value is big than the effect is big also*/
+
+}
+#bestellungen_zahl .box:hover{
+    transform: scale(1.2);
+}
+#bestellungen_zahl .box p{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    font-size: 25px;
+    letter-spacing: 3px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#bestellungen_zahl .circlebox{
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    background: transparent;
+    border: 3px solid #f1f1f1;
+    animation: 1s linear infinite alternate magicBox, /* add a colors on a animated circle*/
+                4s linear infinite spinning;    /*movement of the animated circle*/
+    padding-top: 340px;
+}
+
+/*--------------------- css to have a build page in index.html------------------ */
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;left: 0;right: 0;
+    background: rgba(0,0, 0, 0.7);
+    transition: opacity .4s;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target{
+    visibility: visible;
+    opacity: 1;
+    height: 100%;
+    z-index: 200;
+}
+
+.popup{                         /*in index.html*/
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background: #fff;
+    border-radius: 5px;
+    width: 110%;
+    height: 100%;
+    position: relative;
+    gap: 15px;
+    transition: all 0.4s ease-in-out;
+}
+
+.popup .cross{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size:5px ;
+    text-decoration: none;
+    font-weight: bold;
+    transition: .3s ease;
+    color: #333;
+}
+
+.popup .cross:hover{
+    color: #12fcf8;
+}
+
+.popup .left_build{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.popup .right_build{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #f1f1f1;
+}
+
+.popup .left_build #videoBack{
+    position: relative;
+    object-fit: cover;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+.left_build .combinaison{           /*in section with id=popup */
+    position: absolute;
+    width: 45%;
+    padding: 20px;
+}
+.left_build .combinaison img{
+    width: 70%;
+}
+#ktop{
+    position: absolute;
+    top: -295px;
+    right: -55px;
+    width: 80%;
+    z-index: 99;
+    visibility: hidden;
+}
+#kshort{
+    position: absolute;
+    width: 65%;
+    top:-207px;
+    right: -46px;
+    visibility: hidden;
+}
+#kscokets{
+    position: absolute;
+    bottom: 60px;
+    left: 90px;
+    visibility: hidden;
+}
+
+.popup .right_build .colors{
+    width: 80%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+}
+.popup .right_build .colors ul{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 14px;
+}
+.popup .right_build .colors ul li{
+    list-style: none;
+    cursor: pointer;
+}
+
+.popup .right_build .seeElems{
+    margin-top: 50px;
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow:auto;
+    overflow-y: hidden;
+}
+.popup .right_build .seeElems  .imageOfElem img{
+    width: 100%;
+    height: 50%;
+    object-fit: contain;
+}
+.popup .right_build .seeElems .imageOfElem{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+.popup .right_build .buyElBtn{
+    color: #fff;
+    background-color: #200883;
+    padding: 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+.buyElBtn.disabled{
+    background-color: gray !important;
+    color: rgb(69, 68, 68) !important;
+}
+.popup .right_build .buyElBtn:hover{
+    background-color: #130355;
+}
+.popup .right_build .buyElBtn i{
+    color: #42db75;
+}
+.buyElBtn i:disabled{
+    color:#333 !important;
+}
+
+
+
+
+/*---------------------------- css of kontakt page ----------------------------*/
+
+#choosetoKontakt{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    text-align: center;
+    background-color: #12fcf8;
+}
+#choosetoKontakt .imageLiefer{
+    align-items: center;
+    text-align: center;
+}
+#choosetoKontakt .imageLiefer img{
+    width: 90%;
+}
+#choosetoKontakt .listOfQuestion{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#choosetoKontakt .listOfQuestion li{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin:15px;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
+}
+#choosetoKontakt .listOfQuestion li a{
+    text-decoration: none;
+    color: #000;
+}
+#choosetoKontakt .listOfQuestion li:hover{
+    text-decoration: underline;
+    transform: scale(1.2);
+}
+#choosetoKontakt .listOfQuestion li i{
+    border-radius: 50%;
+    font-size: 18px;
+    background-color: #fff;
+    color: #d6580a;
+    padding: 25px;
+}
+
+#RelativeInfos{
+    display: flex;
+    flex-direction: column;
+}
+#RelativeInfos .infos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    padding: 15px;
+    margin-bottom:5%;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#RelativeInfos .infos:hover{
+    background-color: #c8c3c3;
+}
+#RelativeInfos .infos .infosText{
+    display: flex;
+    flex-direction: column;
+}
+#RelativeInfos .infos .infoChevron{         /*chevron are only for handy format */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+}
+
+
+#kontaktNyobe{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: #42db75;
+    padding: 90px 30px;
+}
+#kontaktNyobe img{
+    width: 95%;
+}
+#kontaktNyobe .kontaktText{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
+#kontaktNyobe .kontaktText button{
+    border-radius: 25px;
+    padding: 15px 0px;
+    color: #fff;
+    background-color: #130355;
+}
+#kontaktNyobe .kontaktText button:hover{
+    background-color: #200883;
+}
+
+
+#hilfe{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    background-color: #0d5cc4;
+    text-align: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+#hilfe img{
+    width: 55%;
+}
+#hilfe .imageNyotel{
+    grid-row: 1;
+}
+#hilfe .hilfeText{
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+#hilfe .hilfeText h3{
+    color: #fff;
+    background-color: #130355;
+    padding: 20px;
+    border-radius: 25px;
+    margin: 0 55px;
+}
+#hilfe .hilfeText h3 i{
+    font-size: 18px;
+}
+#hilfe .hilfeText h3:hover{
+    background-color: #200883;
+}
+
+#feedLocal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#feedLocal .localistaion{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    font-size: 13px;
+    padding: 50px 50px;
+}
+#feedLocal .localistaion .localisation-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+#feedLocal .localistaion img{
+    width: 190%;
+}
+
+#feedLocal .feedback{
+    text-align: center;
+    align-items: center;
+}
+#feedLocal .feedback form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
+#feedLocal .feedback input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+textarea,
+button[type="submit"] {
+    font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+}
+#feedLocal .feedback fieldset{
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 80%;
+}
+.contact input[type="text"],
+.contact input[type="email"],
+.contact input[type="tel"],
+.contact input[type="url"],
+.contact textarea {
+    width: 100%;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+} 
+.contact input[type="text"],
+.contact input[type="email"],
+.contact input[type="tel"],
+.contact input[type="url"],
+.contact textarea {
+    width: 100%;
+    border: 1px solid rgb(17, 228, 84); /* Bordure verte des champs*/
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+} 
+
+.contact input[type="text"]:hover,
+.contact input[type="email"]:hover,
+.contact input[type="tel"]:hover,
+.contact input[type="url"]:hover,
+
+/*------------------------bordure quand le curseur est sur un champs sans cliquer----------------*/
+.contact textarea:hover {
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid #f60b0b;
+}
+
+.contact textarea { /* grosseur cadre message*/
+    height: 100px;
+    max-width: 100%;
+    resize: none;
+}
+
+.contact button[type="submit"] {
+    cursor: pointer;
+    width: 100%;
+    border: none;
+    background: rgb(131, 176, 131);
+    color: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.contact button[type="submit"]:hover {
+    background: rgb(76, 120, 9);
+    -webkit-transition: backgrund 0.3s ease-in-out;
+    -moz-transition: backgrund 0.3s ease-in-out;
+    transition: backgrund-color 0.3s ease-in-out;
+}
+
+
+/* -----------------------------------popup error ---------------------------*/
+#popupPerror .textMessage{
+    width: 90%;
+    height: 30%;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+#popupPerror h2{
+    padding: 16px;
+    border-radius: 15px;
+    background-color: #42db75;
+    font-size: 16px;
+    font-weight: bolder;
+}
+#popupPerror h2:hover{
+    background-color: #03a439;
+}
+#popupPerror h2 i{
+    font-size: 15px;
+    margin-right: 7px;
+}
+#popupPerror .Message{
+    font-size: 15px;
+}
+
+
+
+
+/*---------------------------------- Css of Page quizKontakt------------------------------- */
+.row{
+    margin-top: 10%;
+}
+.col-about {                      
+    display: grid;   
+    grid-template-columns: 100%;
+    margin-bottom: 10px;
+    padding: 0 8px;
+    width: 100%;
+    
+  }
+  .card-team {
+    box-shadow: 0 4px 8px 0 rgba(57, 99, 64, 0.2);
+   margin-bottom: 5%;
+   border: #111111;
+  }
+  
+  .container-team  h2{
+    font-size: 20px;
+    font-weight: 1000;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    margin-left: 160px; ;
+  }
+
+  .container-team .title-team{
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-left: 160px; ;
+
+    color: rgb(11, 100, 151);
+
+  }
+
+  .container-team {
+    padding: 0 16px;
+    padding-top: 1px;
+    margin-top: -55px;
+    cursor: pointer;
+  }
+
+  .barner-quiz {
+    padding: 0 16px;
+    padding-top: 1px;
+    margin-top: 100px;
+    margin-left: 50px;
+    margin-bottom: 25px;
+  }
+
+  .barner-quiz h1 {
+    font-size: 30px;
+  }
+
+  .card-team img{
+    max-width: 200px;
+    padding-right: 10px;
+    width: 100%;
+}
+  .runter-quiz{
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+  .runter-quiz .logo-app img{
+    max-width: 450px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  /* -----------------------------cookies of anmeldungPage --------------------------*/
+  .cookies{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding:0px 25px;
+    cursor: pointer;
+  }
+  .cookies span:nth-child(3){
+    margin-left: 5rem;
+  }
+  .cookies span:hover{
+    text-decoration: underline;
+  }
+
+
+  .logo-footer{
+    text-align: center;
+    font-size: 7px;
+    color: #e0800b;
+    padding: 5px 8px;
+    font-style: italic;
+    font-size: 20px;
+    cursor: pointer;
+    }
+    .logo-footer a{
+        color: #e0800b;
+    }
+    .logo-footer span{
+        color: #03a439;
+    }
+
+  .runter-paragraf h2{
+    margin-top: 30px;
+    color: green;
+    cursor: pointer;
+  }
+
+  .runter-paragraf .title-team{
+    color: green;
+    font-size: 15px;
+  }
+
+
+  /*--------------------------- css postheader in shop--------------------------*/
+.post-header img {
+    height: 10rem;
+    width: 10rem;
+    background: #fff;
+}
+
+.post-header {
+    width: 100%;
+    height: 350px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+}
+
+.post-header .middle-text-description {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+}
+
+.middle-text-description span {
+    font-weight: 700;
+    color: green;
+    font-family: "Roboto", serif;
+}
+
+.middle-text-description h1 {
+    font-size: 2rem;
+    font-family: "Roboto", serif;
+}
+
+.middle-text-description {
+    font-size: 1.5rem;
+}
+
+.middle-text-description a {
+    padding: 3px;
+    align-self: center;
+    border: 2px solid rgba(0, 0, 0, 0.9);
+    border-radius: .5rem;
+    background: #fff;
+    cursor: pointer;
+}
+
+.middle-text-description a:hover {
+    color: #fff;
+    background: green;
+    transform: scale(1.2);
+}
+
+.post-header .image-shirt {
+    align-self: flex-start;
+}
+
+.post-header .image-short {
+    align-self: flex-end;
+}
+
+/* --------------------------css für shop Site ----------------------*/
+
+#image-container1,
+#image-container2,
+#image-container3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.image-item {
+    flex-shrink: 0;
+    /* -------------Empêche la réduction de la taille des images----------- */
+    width: 200px;
+    height: 280px;
+    margin-right: 10px;
+    margin-bottom: 2px;
+    box-shadow: 10px 5px 5px rgb(84, 82, 82);
+    display: flex;
+    flex-direction: column;
+    background: powderblue;
+    border-radius: .6rem;
+}
+
+.image-item img {
+    width: 100%;
+}
+
+.price-and-cart .price {
+    margin-top: 10px;
+    align-self: flex-start;
+}
+
+.produkt-content-short {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 15px;
+    outline: .2rem solid rgba(0, 0, 0, 0.1);
+}
+
+.produkt-content-short:hover {
+    transform: scale(1.1);
+}
+
+.produkt-content-short .infos-content,
+.produkt-content-short .startContainer {
+    padding: 1rem;
+}
+
+.produkt-content-short .infos-content {
+    height: 35px;
+    overflow-x: auto;
+}
+
+.produkt-content-short .price-and-cart {
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 200px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding: 1rem;
+}
+
+.price-and-cart .pick-btn {
+    background: #fff;
+    padding: .6rem;
+    outline: .1rem solid rgba(0, 0, 0, 0.1);
+    border-radius: .5rem;
+    cursor: pointer;
+}
+
+.price-and-cart .pick-btn:hover {
+    background: green;
+}
+
+.infos-content {
+    overflow: hidden;
+}
+
+.image-item i {
+    align-self: flex-end;
+}
+
+.image-item .korbIcon {
+    font-size: 20px;
+}
+
+.heart-icon {
+    font-size: 30px;
+    cursor: pointer;
+    color: gray;
+}
+
+.heart-icon.clicked {
+    color: red;
+}
+
+.heart-icon:hover {
+    transform: scale(1.2);
+}
+
+.startContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+/*------------------------css tabs shop---------------------*/
+.produkt-container {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.tab_box {
+    margin-top: 20px;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 2px solid rgb(229, 229, 229);
+    position: relative;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.tab_box .tab_btn {
+    font-size: 18px;
+    font-weight: 600;
+    color: #919191;
+    background-color: #fff;
+    border: none;
+    padding: 18px;
+    cursor: pointer;
+}
+
+.tab_box .tab_btn.active {
+    color: #bdda8d;
+}
+
+.content_box {
+    padding: 20px;
+}
+
+.content_box .content {
+    display: none;
+    animation: moving 1s ease;
+}
+
+
+.content_box .content.active {
+    display: block;
+}
+
+.content_box .content h2 {
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.content_box .content h2 span {
+    color: #fff;
+}
+
+.line {
+    position: absolute;
+    top: 62px;
+    left: 19px;
+    width: 78px;
+    height: 3px;
+    background: #7360ff;
+}
+
+/*----------------------- review-------------------*/
+.review .heading {
+    text-align: center;
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: black;
+}
+
+.heading span {
+    background: green;
+    color: #fff;
+    display: inline-block;
+    padding: .5rem 3rem;
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+    /*referenz dafür https://bennettfeely.com/clippy/*/
+}
+
+.review .review-slider {
+    width: 100%;
+    border: 0px solid;
+    padding: 1rem;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 2px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.review-slider::-webkit-scrollbar {
+    display: none;
+    /* für Chrome, Safari et Opera */
+    /*cest pour que la barre scrollable de review ne s'affiche pas sur tous les navigateurs*/
+}
+
+.review .review-slider .wrapper {
+    display: flex;
+    gap: 2px;
+}
+
+.review .review-slider .box {
+    width: 300px;
+    height: 350px;
+    border: 0px solid red;
+    background: #fff;
+    border-radius: .5rem;
+    text-align: center;
+    padding: 3rem 2rem;
+    outline-offset: -1rem;
+    outline: .1rem solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0.1);
+    transition: .2s linear;
+
+}
+
+.review .review-slider .box:hover {
+    box-shadow: 1px 1px 10px 4px green;
+}
+
+.review .review-slider .box img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 50%;
+    outline: .1rem solid rgba(0, 0, 0, 0.1);
+}
+
+.review .review-slider .box p {
+    padding-bottom: .5rem;
+    line-height: 1.8;
+    color: lightslategrey;
+    font-size: 1rem;
+}
+
+.review .review-slider .box h3 {
+    padding: 1rem 0;
+    color: black;
+    font-size: 1.7rem;
+}
+
+.review .review-slider .box .stars i {
+    color: orange;
+    font-size: 1.7rem;
+}
+
+
+/*---------------------------------- css anmeldungPage ---------------------*/
+.container{
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.form-box{
+    width: 90%;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: white;
+    padding: 50px 60px 70px;
+    text-align: center;
+}
+
+.form-box h2{
+    font-size: 30px;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.form-box h2 ::after{
+    content: '';
+    width: 30px;
+    height: 40px;
+    border-radius: 3px;
+    background: #3c00a0;
+    position: absolute;
+    bottom: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.input-field{
+    padding-left: 10px;
+    margin: 15px 0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    border: solid green;
+
+    max-height: 65px;
+    transition: max-height 0.005s;
+    overflow: hidden;
+}
+
+.container input{
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 18px 15px;
+}
+.input-field i{
+    font-size: 25px;
+}
+
+.btn-field{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 9%;
+  }
+ .btn-field button{
+    flex-basis: 48%;
+    background: green;
+    color: black;
+    height: 40px;
+    border-radius: 20px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+  }
+  .btn-field button.disable{
+    background: #c4cdc1;
+    color: #555;
+  }
+  
+  .input-group{
+    height: 200px;
+  }
+  .input-group p{
+    font-size: 12px;
+  }
+
+
+  /* --------------------------css message flottant -----------------------*/
+  .message-flottant {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #24b913;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    opacity: 1;
+    transition: opacity 1s ease-out;
+}
+
+ /* -------------------------------css checkout-Page ------------------------------------*/
+ /*---------------------------------- Check out  page CSS -------------------------------*/
+.checkout-body{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 250px 10px 350px 10px;
+}
+.step-check{
+    background-color:green;
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
+    margin-bottom: 1rem;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 60%;
+}
+.progress-checkout-container{
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    width: 100%;
+    margin-left: 30%;
+}
+
+ /* --------------------------------------progres where you are------------------------------*/
+.progress-step-container:nth-of-type(3) .step-check::after{
+    display: none;
+}
+.progress-step-container:nth-of-type(3) .step-check{ 
+    background-image: none;
+    background-color: white;
+    border: 2px solid grey;
+}
+.progress-step-container:nth-of-type(2) .step-check::after{
+    background-color: grey;
+    display: none;
+}
+.progress-step-container:nth-of-type(2) .step-check{
+    background-image: none;
+    background-color: white;
+    border: 2px solid green;
+}
+
+.step-check::after{
+    content: "";
+    width: 15vw;
+    height: 2px;
+    background-color: inherit;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateX(100%) translateY(-50%);
+    display: none;
+}
+
+.form-container{
+    width: 60%;
+    margin-top: 6rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: center;
+}
+.form-title{
+    font-size: 20px;
+    display: block;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-weight: 600;
+    opacity: 0.8;
+}
+
+.checkout-form{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+.input-line{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+label{
+    font-size: 16px;
+    color: rgb(102, 98, 98);
+    margin-bottom: 0.5rem;
+}
+.input-line input[type="text"]{
+    width: 100%;
+    height: 40px;
+    padding: 0 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+}
+.input-line input[type="text"]::placeholder{
+    font-size: 14px;
+}
+/*---------------------------------------------------- Versand   Zahlung .......------------------------*/
+.step-title{
+    color: grey;
+}
+
+.input-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.input-container .input-line{
+    width: 48%;
+}
+
+.checkout-form input[type="button"]{
+    background-color: green;
+    color: white;
+    font-weight: 500;
+    font-size: 18px;
+    height: 50px;
+    padding: 0 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 40px;
+    margin-top: 10px;
+}
+input[type="button"]:hover{
+    background-color: #037981;
+    transition: ease-in-out;
+} 
+/* -------------------------------css Ueber uns Site-----------------------------*/
+.aboutUs-Container {
+    background: #fff;
+}
+
+ .storySection-background {
+    margin-top: 70px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-image: url("about_foto.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgb(117, 202, 228);
+    width: 100%;
+    height: 230px;
+    z-index: 1;
+    height: 80vh;
+} 
+
+.storySection-background{
+    background-size: contain;
+    height: 30vh;
+    width: 100%;
+}
+.storySection-heading video {
+    margin-top: 1rem;
+    width: 100%;
+    height: 30vh;
+}
+.storySection-heading {
+    top: 1rem;
+    position: relative;
+    z-index: 2;
+    color: white;
+    text-align: center;
+    font-weight: 900;
+    padding: 0 2rem;
+}
+
+.story-text {
+    font-weight: 700;
+    line-height: 1.25;
+    font-size: 3rem;
+    font-family: Italic, Helvetica, sans-serif;
+}
+
+.story-text span {
+    color: rgb(36, 115, 8);;
+}
+
+.storySection-image {
+    margin-top: 3rem;
+    margin-bottom: 5rem;
+    text-align: center;
+}
+
+.storySection-image img {
+    width: 100%;
+}
+
+.storySection-storytext {
+    text-align: left;
+    margin-bottom: .5rem;
+    gap: 4rem;
+}
+
+.storySection-storytext .text-heading {
+    font-size: 1.8rem;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.Container-container {
+    margin: auto;
+    width: 100%;
+    background: #f4eeee;
+    width: 100%;
+    margin: 4rem 0;
+    padding: 5rem;
+}
+
+.textstory {
+    margin-top: 2rem;
+    padding: 2rem;
+}
+
+.ContentWrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+}
+
+.Numer-section-heading {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 550px;
+    border: 1px solid;
+
+}
+
+.NumberSectionNumber {
+    text-align: center;
+    gap: 2rem;
+}
+
+.NumberSection-description {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 3rem auto;
+    gap: 1.4rem;
+    max-width: 300px;
+}
+
+.guideSection-container {
+    text-align: center;
+    margin: 4rem 0rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.text-variantDisplay {
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 1.5;
+}
+
+main .textVariant-Text {
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.5;
+    font-family: 'arial', sans-serif;
+}
+
+.NumberSection_subhead {
+    color: #396e48;
+    font-size: 1.87rem;
+}
+
+
+.guideSection-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.54rem;
+    margin: 3rem 0;
+}
+
+.guideSection-guides {
+    margin-top: 5rem;
+}
+
+.guideSection-description span {
+    font-size: 1.3125rem;
+    font-weight: 600;
+}
+
+.guideSection-description p {
+    font-size: 1.342rem;
+}
+
+.guideSection-description .textVariant-Text {
+    max-width: 500px;
+    padding: 2rem;
+}
+
+.guideSection-description button {
+    display: inline-flex;
+    padding: .46875rem 1rem;
+    border: none;
+    border-radius: 100px;
+    font-weight: 500;
+    justify-content: center;
+    margin-bottom: .5rem;
+    line-height: 1;
+    max-width: 200px;
+    background-color: #3fed73;
+}
+
+.activeElem{
+    border-bottom: 2px greenyellow;
+    border-right: 2px greenyellow;
+}
+
+/* ------------------------------------------css about us -------------------------------*/
+svg{
+    fill: green;
+    width:20%;
+     height:20%;
+}
+
+
+@keyframes magicBox{
+    from{
+        box-shadow:
+        0 0 0 #feac5e,
+        0 0 0 #c779d0,
+        0 0 0 #4bc0c8,
+        0 0 0 #42db75;
+    }
+    to{
+        box-shadow:
+        0 -10px 0 #feac5e,
+        -10px 0 0 #c779d0,
+        0 10px 0 #4bc0c8,
+        10px 0 0 #42db75;
+    }
+}
+
+@keyframes spinning{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+@keyframes defilementImages{
+    0%{
+        transform: translateX(0);
+    }
+    16.67%{
+        transform: translateX(-684px);
+    }
+    33.34%{
+        transform: translateX(-1348px);
+    }
+    50.01%{
+        transform: translateX(-2042px);
+    }
+    66.68%{
+        transform: translateX(-2806px);
+    }
+    83.35%{
+        transform: translateX(-3406px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+/*-------------------------------------------------- keyframe für die Werbung--------------------------------- */
+@-webkit-keyframes diapo{
+    0%{background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHULqksru3rMq2dkccu167crF0Dr0ARrBuJg&usqp=CAU");}
+    33%{background-image: url("https://www.footpack.fr/wp-content/uploads/2020/09/maillot-de-foot-ecurie-mercedes-formula-1-f1.jpeg");}
+    66%{background-image: url("https://contents.mediadecathlon.com/s952806/k$9eebb4e228a50c6f52b2b93b848d0836/1920x0/4392pt2853/8784xcr3660/default.png?format=auto");}
+}
+
+@-moz-keyframes diapo{
+    0%{background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHULqksru3rMq2dkccu167crF0Dr0ARrBuJg&usqp=CAU");}
+    33%{background-image: url("https://www.footpack.fr/wp-content/uploads/2020/09/maillot-de-foot-ecurie-mercedes-formula-1-f1.jpeg");}
+    66%{background-image: url("https://contents.mediadecathlon.com/s952806/k$9eebb4e228a50c6f52b2b93b848d0836/1920x0/4392pt2853/8784xcr3660/default.png?format=auto");}
+}
+
+
+@keyframes diapo{
+    0%{background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHULqksru3rMq2dkccu167crF0Dr0ARrBuJg&usqp=CAU");}
+    33%{background-image: url("https://www.footpack.fr/wp-content/uploads/2020/09/maillot-de-foot-ecurie-mercedes-formula-1-f1.jpeg");}
+    66%{background-image: url("https://contents.mediadecathlon.com/s952806/k$9eebb4e228a50c6f52b2b93b848d0836/1920x0/4392pt2853/8784xcr3660/default.png?format=auto");}
+}
+
+/* --------------------------------bneutzte Keyfram in shopSeite ------------------------------------*/
+@keyframes moving {
+    from {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++ media query  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++ media query  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++ media query  +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+@media(min-width:390px){
+    /*---------- pick and build css ----------*/
+    #ktop{
+        top: -330px;
+        right: -48px;
+        z-index: 99;
+    }
+    #kshort{
+        top: -234px;
+        right: -39px;
+        z-index: 90;
+    }
+    #kscokets{
+        bottom: 40px;
+        left: 85px;
+    }
+}
+@media (min-width:393px){
+    /* -------------css of warenKorb ---------------*/
+    header .WarenkorbList{
+        margin-left: 12px;
+    }
+
+        
+}
+@media (min-width:412px){
+    /*----------------- css of elemWarenkorb------------- */
+    header .WarenkorbList{
+        margin-left: 25px;
+    }
+
+    /*-------------- pick and build css -----------*/
+    #ktop{
+        top: -320px;
+        right: -48px;
+        width: 65%;
+        z-index: 99;
+    }
+    #kshort{
+        top: -234px;
+        right: -39px;
+        width: 50%;
+        z-index: 90;
+    }
+    #kscokets{
+        width: 50%;
+        bottom: 90px;
+        left: 115px;
+    }
+}
+@media (min-width:540px){
+    header .logo,.elList,.search_platz{
+        margin-right: 50px;
+    }
+    #searchfield-header-input{
+        display: flex;
+        line-height: 1.6;
+        height: 13px;
+        padding: 2.0rem 2.6rem;
+        visibility: visible;
+        
+        
+    }
+    .search .button_reset_search{
+        border-width: 1px 0px 1px 1px;
+        border-top: solid #9d9292;
+        border-bottom: solid #9d9292;
+        padding: 7px 12px;
+        visibility: visible;
+    }
+    .button_search{
+        border-width: 1px 0px 1px 1px;
+        border-top: solid transparent;
+        border-bottom: solid transparent;
+        border-radius: 0px 5px 5px 0px;
+        background-color: rgb(222, 18, 18);
+        padding: 7px 12px;
+    }
+
+    body{
+        min-width: 540px;
+    }
+
+    #home .beschreib{
+        height: 500px;   
+    }
+
+    .section_title::before{
+        left: 260px;
+        width: 10%;
+        height: 5px;
+        
+    }
+    .section_title::after{
+        left: 360px;
+        width: 10%;
+        height: 5px;
+    }
+
+
+    #build .bau figure{
+        width: 90%;
+        align-items: center;
+        text-align: center;
+    }
+    #build .bau figure img{
+        width: 50%;
+    }
+    #build .bau figure .neu{
+        padding: 25px 95px;
+    }
+    #build .bau figure .neu figcaption{
+        font-size: 20px;
+    }
+    #build .bau figure .neu i{
+        font-size: 20px;
+    }
+
+    #Fragen .textvon p{
+        font-size: 17px;
+    }
+    #Fragen .imagesvon img{
+        width: 9%;
+    }
+
+    .popup .cross{
+        position: absolute;
+        top: -0.2rem;
+        right: 3rem;
+        font-size:8px ;
+        text-decoration: none;
+        font-weight: bold;
+        transition: .3s ease;
+        color: #333;
+    }
+    .popup .right_build .seeElems{
+        height: 70%;
+        overflow:visible;
+        overflow-y: visible;
+        flex-wrap: wrap;
+    }
+    .popup .right_build .seeElems  .imageOfElem{
+        height: 15%;
+        width: 15%;
+    }
+    .popup .right_build .seeElems  .imageOfElem img{
+        width: 100%;
+        height: 100%;
+    }
+    
+
+    /* ------------------------------css of pick and build ------------------------*/
+
+    #ktop{
+        position: absolute;
+        top: -267px;
+        right: -70px;
+        width: 40%;
+        z-index: 99;
+    }
+    #kshort{
+        position: absolute;
+        top: -200px;
+        right: -63.5px;
+        width: 32%;
+        z-index: 90;
+    }
+    #kscokets{
+        position: absolute;
+        width: 35%;
+        bottom: 70px;
+        left: 200px;
+    }
+
+    /*---------------------------@media shop----------------------*/
+    #image-container1,
+    #image-container2,
+    #image-container3 {
+        gap: 1.5rem;
+    }
+
+    .post-header img {
+        height: 12rem;
+        width: 12rem;
+    }
+
+    .line {
+        left: 48px;
+    }
+
+    .middle-text-description h1 {
+        font-size: 2.5rem;
+    }
+    /*-------------------------css fürdie Seite über uns--------------*/
+    .aboutUs-Container .textVariant-Text {
+        font-weight: 300;
+        font-size: 1.7rem;
+    }
+        /*---------------------css about us--------------*/
+        
+        .storySection-container .storySection-background {
+            height: 30vh;
+        }
+    
+        .storySection-container video {
+            margin-top: 5rem;
+            height: 30vh;
+        }
+
+        /*-------------------------- css of elemWarenkorb------------------------- */
+     header .WarenkorbList{
+        margin-left: 110px;
+    }
+
+    /* ----------------------------Css of Page quizKontakt----------------------------- */
+.row{
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: 100%;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+    
+}
+
+@media(min-width:760px){
+    /* --------------------------css of kontakt page--------------------- */
+
+#choosetoKontakt{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    text-align: center;
+
+}
+#choosetoKontakt .imageLiefer{
+    align-items: center;
+    text-align: center;
+}
+#choosetoKontakt .imageLiefer img{
+    width: 80%;
+}
+#choosetoKontakt .listOfQuestion{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#choosetoKontakt .listOfQuestion li{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin:15px;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
+}
+#choosetoKontakt .listOfQuestion li a{
+    text-decoration: none;
+    color: #000;
+}
+#choosetoKontakt .listOfQuestion li:hover{
+    text-decoration: underline;
+    transform: scale(1.2);
+}
+#choosetoKontakt .listOfQuestion li i{
+    border-radius: 50%;
+    font-size: 18px;
+    background-color: #fff;
+    color: #d6580a;
+    padding: 50px;
+}
+
+#RelativeInfos{
+    display: flex;
+    flex-direction: column;
+}
+#RelativeInfos .infos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    padding: 15px;
+    margin-bottom:5%;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#RelativeInfos .infos:hover{
+    background-color: #c8c3c3;
+}
+#RelativeInfos .infos .infosText{
+    display: flex;
+    flex-direction: column;
+}
+#RelativeInfos .infos .infoChevron{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+}
+
+
+#kontaktNyobe{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: #42db75;
+    padding: 90px 30px;
+}
+#kontaktNyobe img{
+    width: 95%;
+}
+#kontaktNyobe .kontaktText{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
+#kontaktNyobe .kontaktText button{
+    border-radius: 25px;
+    padding: 15px 0px;
+    color: #fff;
+    background-color: #130355;
+}
+#kontaktNyobe .kontaktText button:hover{
+    background-color: #200883;
+}
+
+
+#hilfe{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    background-color: #0d5cc4;
+    text-align: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+#hilfe img{
+    width: 55%;
+}
+#hilfe .imageNyotel{
+    grid-row: 1;
+}
+#hilfe .hilfeText{
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+#hilfe .hilfeText h3{
+    color: #fff;
+    background-color: #130355;
+    padding: 20px;
+    border-radius: 25px;
+    margin: 0 55px;
+}
+#hilfe .hilfeText h3 i{
+    font-size: 18px;
+}
+#hilfe .hilfeText h3:hover{
+    background-color: #200883;
+}
+
+#feedLocal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#feedLocal .localistaion{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    font-size: 13px;
+    padding: 50px 50px;
+}
+#feedLocal .localistaion .localisation-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+#feedLocal .localistaion img{
+    width: 100%;
+}
+
+#feedLocal .feedback{
+    text-align: center;
+    align-items: center;
+}
+#feedLocal .feedback form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
+#feedLocal .feedback input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+textarea,
+button[type="submit"] {
+    font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+}
+#feedLocal .feedback fieldset{
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 80%;
+}
+.contact input[type="text"],
+.contact input[type="email"],
+.contact input[type="tel"],
+.contact input[type="url"],
+.contact textarea {
+    width: 100%;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+} 
+.contact input[type="text"],
+.contact input[type="email"],
+.contact input[type="tel"],
+.contact input[type="url"],
+.contact textarea {
+    width: 100%;
+    border: 1px solid rgb(17, 228, 84); /* Bordure verte des champs*/
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+} 
+
+/* -----------------------css of warenKorb ------------------------------*/
+header .WarenkorbList{
+    
+    margin-left: 260px;
+}
+
+/*----------------------------- pick and build css ---------------------*/
+#ktop{
+    position: absolute;
+    top: -429px;
+    right: -138px;
+    width: 55%;
+    z-index: 99;
+}
+#kshort{
+    position: absolute;
+    top: -290px;
+    right: -120px;
+    width: 42%;
+    z-index: 90;
+}
+#kscokets{
+    position: absolute;
+    width: 45%;
+    bottom: 50px;
+    left: 295px;
+}
+
+/* ------------------------css cookies anmeldungPage --------------------------*/
+.cookies span:nth-child(3){
+    margin-left: 7rem;
+  }
+  .cookies span{
+    font-size: 12px;
+    color: #000;
+    margin-left: 7rem;
+  }
+
+
+}
+
+@media (min-width:820px){
+    .logo{
+        font-size: 10px;
+        color: #fff;
+        background-color: #000;
+        padding: 5px 8px;
+        font-weight: bold;
+    }
+
+
+    footer .logo{
+        width: 130px;
+        margin-bottom: 10px;
+    }
+
+    header .logo,.elList,.search_platz{
+        margin-right: 20px;
+    }
+
+    header ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    /* -------------------------------css of warenKorb----------------------- */
+    header .WarenkorbList{
+        width: 300px;
+        height: 80vh;
+        top:80px;
+        margin-left: 245px;
+    }
+    header li {
+        list-style: none;
+    }
+    header .fa-xmark,.fa-bars{
+        display: none;
+        position: absolute;
+        top: -100px;
+        left: -2000px;
+    }
+    header .fa-bars{
+        padding-left: 0px;
+    }
+    header ul{
+        background:transparent;
+        position:relative;
+        top: 0;
+        width: 0px;
+        height: 0vh;
+        padding-top: 0px;
+        z-index: 0;
+        transition:none;
+    
+    }
+    
+    header ul li{
+        display: flex;
+        margin: 0px;
+    }
+    
+    
+
+    .class{
+        display: flex;
+        flex-direction: column;
+        margin-right: 15px;
+        color: #9d9292;
+        transition: 0.2s;
+    }
+
+    .class i{
+        font-size: 26px;
+    }
+    
+    .class span.te{
+        margin-left: 0px;
+        margin-top: 0px;
+        visibility: hidden;
+    }
+
+    #home .beschreib{
+        height: 500px;   
+    }
+
+    .section_title::before{
+        left: 260px;
+        width: 10%;
+        height: 5px;
+        
+    }
+    .section_title::after{
+        left: 360px;
+        width: 10%;
+        height: 5px;
+    }
+
+
+    #build .bau figure{
+        width: 90%;
+        align-items: center;
+        text-align: center;
+    }
+    #build .bau figure img{
+        width: 50%;
+    }
+    #build .bau figure .neu{
+        padding: 25px 95px;
+    }
+    #build .bau figure .neu figcaption{
+        font-size: 20px;
+    }
+    #build .bau figure .neu i{
+        font-size: 20px;
+    }
+
+    #Fragen .textvon p{
+        font-size: 17px;
+    }
+    #Fragen .imagesvon img{
+        width: 9%;
+    }
+
+    .popup .cross{
+        position: absolute;
+        top: -0.2rem;
+        right: 3rem;
+        font-size:8px ;
+        text-decoration: none;
+        font-weight: bold;
+        transition: .3s ease;
+        color: #333;
+    }
+    .popup .right_build .seeElems{
+        height: 70%;
+        overflow:visible;
+        overflow-y: visible;
+        flex-wrap: wrap;
+    }
+    .popup .right_build .seeElems  .imageOfElem{
+        height: 15%;
+        width: 15%;
+    }
+    .popup .right_build .seeElems  .imageOfElem img{
+        width: 100%;
+        height: 100%;
+    }
+    
+
+    /* --------------------------pick and build css----------------- */
+    #ktop{
+        position: absolute;
+        top: -459px;
+        right: -138px;
+        width: 55%;
+        z-index: 99;
+    }
+    #kshort{
+        position: absolute;
+        top: -310px;
+        right: -120px;
+        width: 42%;
+        z-index: 90;
+    }
+    #kscokets{
+        position: absolute;
+        width: 45%;
+        bottom: 50px;
+        left: 295px;
+    }
+
+    /*--------------------------@media shop Seite-------------------------*/
+    .middle-text-description h1 {
+        font-size: 3rem;
+    }
+
+    .post-header img {
+        height: 14rem;
+        width: 14rem;
+    }
+
+    .line {
+        left: 93px;
+    }
+    /*-------------------css about us seite-----------------------*/
+    .storySection-heading {
+    top: 5rem;
+    }
+    .storySection-heading video {
+    margin-top: 2rem;
+}
+    .aboutUs-Container .textVariant-Text {
+        font-weight: 300;
+        font-size: 1.8rem;
+    }
+    .NumberSectionNumber {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .NumberSection-description {
+        margin: 2rem 0;
+        font-size: 1.5rem;
+    }
+
+    /* --------------------------Css of Page quizKontakt--------------------- */
+.row{
+    margin-top: 10%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+
+    
+}
+
+
+@media (min-width:912px){
+    .logo{
+        font-size: 10px;
+        color: #fff;
+        background-color: #000;
+        padding: 5px 8px;
+        font-weight: bold;
+    }
+
+    footer .logo{
+        width: 130px;
+        margin-bottom: 10px;
+    }
+
+    header .logo,.elList,.search_platz{
+        margin-right: 45px;
+    }
+
+    header ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    header li {
+        list-style: none;
+    }
+    header .fa-xmark,.fa-bars{
+        display: none;
+        font-size: 25px;
+        position: absolute;
+        top: -100px;
+        left: -2000px;
+    }
+    header .fa-bars{
+        padding-left: 0px;
+    }
+    header ul{
+        background:transparent;
+        position:relative;
+        top: 0;
+        width: 0px;
+        height: 0vh;
+        padding-top: 0px;
+        z-index: 0;
+        transition:none;
+    
+    }
+    
+    
+    header ul li{
+        display: flex;
+        margin: 0px;
+    }
+    
+    section{
+        margin-bottom: 150px;
+    }
+
+    .section_title::before{
+        left: 280px;
+        width: 10%;
+        height: 5px;
+        
+    }
+    .section_title::after{
+        left: 380px;
+        width: 10%;
+        height: 5px;
+    }
+
+    #Fragen .section_title::before{
+        left: 580px;
+        width: 10%;
+        height: 5px;
+        
+    }
+    #Fragen .section_title::after{
+        left: 680px;
+        width: 10%;
+        height: 5px;
+    }
+    
+
+    .class{
+        display: flex;
+        flex-direction: column;
+        margin-right: 35px;
+        color: #9d9292;
+        transition: 0.2s;
+    }
+    
+    .class span.te{
+        margin-left: 0px;
+        margin-top: 7px;
+        visibility: visible;
+    }
+
+    #home .ganz_werbung{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        margin: 50px;
+        margin-bottom: 70px;
+        gap: 10px;
+    }
+    #home .left_werbung{
+        grid-column: 1;
+        background-image: url("images/rabatt-removebg-preview.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    #home .werbung{
+        grid-column: 2/4;
+        min-height: 100%;
+    }
+
+    #home .werbung p{
+        top: 180px;
+    }
+
+    #home .beschreib{
+        display: grid;
+        grid-template-rows: none;
+        grid-template-columns: 1fr 1fr;
+        color:#fff;
+        height: 500px;
+        
+    }
+    #home .beschreib .left{
+        grid-row: 1/2;
+        grid-column: 1;
+        padding: 10% 10%;
+    }
+    #home .beschreib .left p{
+        font-size: 19px;
+    }
+    #home .beschreib .left h1{
+        font-size: 25px;
+    }
+
+    #home .beschreib .right{
+        grid-row: 1;
+        grid-column: 2;
+    }
+    #home .beschreib .right{
+        background-size: 500px;
+    }
+
+
+    #build .bau{
+        display: grid;
+        grid-template-rows: none;
+        grid-template-columns: repeat(3,1fr);
+    }
+    #build .bau figure{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2,1fr);
+        margin:20px;
+        width: 200px;
+        height: 350px;
+        align-items: center;
+        text-align: center;
+    }
+    #build .bau figure img{
+        grid-row: 1/1;
+        grid-column: 2/2;
+        margin-top: 25px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    #build .bau figure .neu{
+        grid-row: 2/2;
+        grid-column: 2/2;
+        padding: 0px 0px;
+    }
+    #build .bau figure .neu figcaption{
+        grid-row: 1;
+        font-size: 15px;
+        font-weight: bold;
+        color: #000;
+        margin-bottom: 50px;
+    }
+    #build .bau figure .neu i{
+        grid-row: 2;
+        font-size: 15px;
+        border:1px solid #fff;
+        border-radius: 50%;
+        padding:15px 15px;
+        background-color: #eda73f;
+        color:#fff
+    }
+
+    #Fragen .textvon p{
+        font-size: 14px;
+    }
+    #Fragen .imagesvon img{
+        width: 5%;
+    }
+
+    #bestellungen_zahl .box{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+    }
+    #bestellungen_zahl .circlebox{
+        grid-column: 3;
+    }
+    #bestellungen_zahl .box p{
+        grid-column: 3;
+    }
+
+    .popup{
+        display: grid;
+        grid-template-rows: none;
+        grid-template-columns: repeat(2,1fr);
+        left: 5%;
+        width: 90%;
+        height: 70%;
+        gap:0px;
+    }
+    .popup .left_build{
+        position: relative;
+        grid-column: 1;
+        grid-row: 1/2;
+        width: 90%;
+        background-color: #42db75;
+    }
+    .popup .right_build{
+        grid-column: 2;
+        grid-row: 1/2;
+        width: 90%;
+    }
+    
+    .popup .left_build #videoBack{
+        object-fit: cover;
+    }
+    .left_build .combinaison{
+        position: absolute;
+        bottom: 30%;
+        left: 30%;
+        width: 50%;
+        padding: 20px;
+    }
+
+    .popup .right_build .colors{
+        padding: 15px;
+        background-color: #fff;
+    }
+
+    .popup .right_build .seeElems{
+        height: 70%;
+        overflow:visible;
+        overflow-y: visible;
+        flex-wrap: wrap;
+    }
+    .popup .right_build .seeElems  .imageOfElem{
+        height: 25%;
+        width: 25%;
+    }
+    .popup .right_build .seeElems  .imageOfElem img{
+        width: 100%;
+        height: 100%;
+    }
+    
+
+    /* ----------------------------css of pick and build------------------------------ */
+    #ktop{
+        top: -359px;
+        right: 18px;
+        width: 90%;
+        z-index: 99;
+    }
+    #kshort{
+        top: -246px;
+        right: 27px;
+        width: 75%;
+        z-index: 90;
+    }
+    #kscokets{
+        width: 80%;
+        bottom: 9px;
+        left: 5px;
+    }
+
+
+    .popup .right_build .buyElBtn{
+        font-size: 17px;
+        padding: 17px;
+        border-radius: 25px;
+    }
+
+    
+
+    
+
+    
+    /*------------------------------@media shop Siete------------------------------*/
+    .post-header{
+    top:80px;
+    }
+    .middle-text-description h1 {
+        font-size: 4rem;
+    }
+
+    .middle-text-description {
+        font-size: 1.8rem;
+    }
+
+    .post-header img {
+        height: 19rem;
+        width: 18rem;
+    }
+
+    .line {
+        left: 110px;
+    }
+
+    /* -------------------------css of warenKorb----------------------------- */
+    header .WarenkorbList{
+        width: 500px;
+        height: 80vh;
+        z-index: 100;
+        top: 75px;
+        left: 100%;
+        transition: all 0.3s ease;
+        margin-left: 103px;
+    }
+    header .WarenkorbList .warenkorb_title{
+        font-size: 2rem;
+    }
+    header .WarenkorbList img{
+        width: 50%;
+    }
+    
+
+    /*----------------------------------------css about us---------------------------------*/
+    .storySection-heading,
+    .storySection-storytext {
+        margin: 0 20px;
+    }
+        
+
+    .storySection-storytext {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .guideSection-container {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .guideSection-guides {
+        margin: 4rem 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        background: linear-gradient(rgb(214, 209, 209), rgb(203, 194, 194)) no-repeat 50%/1px 100%;
+        padding: 1rem 3rem;
+        grid-gap: 3rem;
+        max-width: 1000px;
+    }
+
+    .guideSection-container .text-variantDisplay,
+    .Numer-section-heading .text-variantDisplay {
+        font-size: 3rem;
+    }
+
+    .textstory .textVariant-Text,
+    .Numer-section-heading .textVariant-Text,
+    .NumberSection-description .textVariant-Text,
+    .guideSection-description .textVariant-Text {
+        font-size: 2.1rem;
+    }
+
+    .storySection-image {
+        width: auto;
+        height: auto;
+    }
+    .aboutUs-Container .textVariant-Text {
+        font-weight: 300;
+        font-size: 1.8rem;
+    }
+
+    .NumberSectionNumber {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .NumberSection-description {
+        margin: 2rem 0;
+        font-size: 1.5rem;
+    }
+    
+    /* ------------------------css of kontakt page----------------------- */
+
+#choosetoKontakt{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    text-align: center;
+}
+#choosetoKontakt .imageLiefer{
+    align-items: center;
+    text-align: center;
+}
+#choosetoKontakt .imageLiefer img{
+    width: 60%;
+}
+#choosetoKontakt .listOfQuestion{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#choosetoKontakt .listOfQuestion li{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    margin:15px;
+    font-size: 15px;
+    transition: all 0.3s ease-in-out;
+}
+#choosetoKontakt .listOfQuestion li a{
+    text-decoration: none;
+    color: #000;
+}
+#choosetoKontakt .listOfQuestion li:hover{
+    text-decoration: underline;
+    transform: scale(1.2);
+}
+#choosetoKontakt .listOfQuestion li i{
+    border-radius: 50%;
+    font-size: 20px;
+    background-color: #fff;
+    color: #d6580a;
+    padding: 75px;
+}
+
+#RelativeInfos{
+    display: flex;
+    flex-direction: column;
+}
+#RelativeInfos .infos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    padding: 15px;
+    margin-bottom:5%;
+    border: 1px solid black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#RelativeInfos .infos:hover{
+    background-color: #c8c3c3;
+}
+#RelativeInfos .infos .infosText{
+    display: flex;
+    font-size: 17px;
+    flex-direction: column;
+}
+#RelativeInfos .infos .infoChevron{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25px;
+}
+
+
+#kontaktNyobe{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    background-color: #42db75;
+    padding: 90px 30px;
+}
+#kontaktNyobe img{
+    width: 95%;
+}
+#kontaktNyobe .kontaktText{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
+#kontaktNyobe .kontaktText button{
+    border-radius: 25px;
+    padding: 15px 0px;
+    color: #fff;
+    background-color: #130355;
+}
+#kontaktNyobe .kontaktText button:hover{
+    background-color: #200883;
+}
+
+
+#hilfe{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    background-color: #0d5cc4;
+    text-align: center;
+    align-items: center;
+    padding: 50px 20px;
+}
+#hilfe img{
+    width: 55%;
+}
+#hilfe .imageNyotel{
+    grid-row: 1;
+}
+#hilfe .hilfeText{
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+#hilfe .hilfeText h3{
+    color: #fff;
+    background-color: #130355;
+    padding: 20px;
+    border-radius: 25px;
+    margin: 0 55px;
+}
+#hilfe .hilfeText h3 i{
+    font-size: 18px;
+}
+#hilfe .hilfeText h3:hover{
+    background-color: #200883;
+}
+
+#feedLocal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#feedLocal .localistaion{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    font-size: 13px;
+    padding: 50px 50px;
+}
+#feedLocal .localistaion .localisation-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 18px;
+}
+
+#feedLocal .localistaion img{
+    width: 100%;
+}
+
+#feedLocal .feedback{
+    text-align: center;
+    align-items: center;
+}
+#feedLocal .feedback form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
+#feedLocal .feedback input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+textarea,
+button[type="submit"] {
+    font: 400 12px/16px "Roboto", Helvetica, Arial, sans-serif;
+}
+#feedLocal .feedback fieldset{
+    border: medium none !important;
+    margin: 0 0 10px;
+    min-width: 100%;
+    padding: 0;
+    width: 80%;
+}
+.contact input[type="text"],
+.contact input[type="email"],
+.contact input[type="tel"],
+.contact input[type="url"],
+.contact textarea {
+    width: 100%;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+} 
+.contact input[type="text"],
+.contact input[type="email"],
+.contact input[type="tel"],
+.contact input[type="url"],
+.contact textarea {
+    width: 100%;
+    border: 1px solid rgb(17, 228, 84); /* Bordure verte des champs*/
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+} 
+
+}
+
+
+
+
+@media (min-width:1000px){
+    header{
+    position:fixed;
+    }
+    header .logo,.elList,.search_platz{
+        margin-right: 95px;
+    }
+
+    #Fragen .section_title::before{
+        left: 350px;
+        width: 10%;
+        height: 5px;
+        
+    }
+    #Fragen .section_title::after{
+        left: 450px;
+        width: 10%;
+        height: 5px;
+    }
+
+    /* -------------------------------------css body section#home---------------------------------*/
+    #home{
+        top:80px;
+        margin-top: 50px;
+    }
+
+
+    .popup{
+        display: grid;
+        grid-template-rows: none;
+        grid-template-columns: repeat(2,1fr);
+        left: 5%;
+        width: 90%;
+        height: 70%;
+        gap:0px;
+    }
+    .popup .left_build{
+        position: relative;
+        grid-column: 1;
+        grid-row: 1/2;
+        width: 90%;
+        background-color: #42db75;
+    }
+    .popup .right_build{
+        grid-column: 2;
+        grid-row: 1/2;
+        width: 90%;
+    }
+    
+    .popup .left_build #videoBack{
+        object-fit: cover;
+    }
+    .left_build .combinaison{
+        position: absolute;
+        bottom: 30%;
+        left: 30%;
+        width: 50%;
+        padding: 20px;
+    }
+
+    .popup .right_build .colors{
+        padding: 15px;
+        background-color: #fff;
+    }
+
+    .popup .right_build .seeElems{
+        height: 70%;
+        overflow:visible;
+        overflow-y: visible;
+        flex-wrap: wrap;
+    }
+    .popup .right_build .seeElems  .imageOfElem{
+        height: 25%;
+        width: 25%;
+    }
+    .popup .right_build .seeElems  .imageOfElem img{
+        width: 100%;
+        height: 100%;
+    }
+    
+
+
+    #ktop{
+        position: absolute;
+        top: -220px;
+        right: 18px;
+        width: 90%;
+        z-index: 99;
+    }
+    #kshort{
+        position: absolute;
+        top: -107px;
+        right: 33px;
+        width: 70%;
+        z-index: 90;
+    }
+    #kscokets{
+        position: absolute;
+        width: 70%;
+        bottom: -100px;
+        left: 20px;
+    }
+
+    /* -----------------------css page quizKontakt---------------------- */
+    .row{
+        margin-top: 2%;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    
+    
+    .col-about{
+        padding:0 8px;
+    }
+    .card-team img{
+        max-width: 95px;
+        padding-right: 10px;
+    }
+    
+    .container-team .title-team{
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: 5px;
+        margin-left:160px;
+    }
+    .runter-quiz{
+        padding-left: 20%;
+    }
+    .logo-app{
+        text-align: right;
+    }
+    .runter-paragraf{
+        margin-top: 6%;
+        margin-left: -13%;
+    }
+    /* -----------------------------css cookies anmeldungPage ------------------*/
+    .cookies span:nth-child(3){
+    margin-left: 7rem;
+    }
+    .cookies span{
+    font-size: 12px;
+    color: #000;
+    margin-left: 7rem;
+    } 
+    .cookies{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        align-items: center;
+        padding-left: 150px;
+        font-size: 15px;
+        cursor: pointer;
+    }
+
+    /*-------------------------@media shop Siete-----------------*/
+    .post-header img {
+        height: 20rem;
+        width: 19rem;
+    }
+
+    .line {
+        left: 127px;
+    }
+
+    
+    /*-------------------------------css about us---------------------------*/
+    .aboutUs-Container{
+    margin-top:100px;
+    }
+    .storySection-container .storySection-background{
+        height: 45vh;
+    }
+    .storySection-container video{
+        height: 50vh;
+    }
+
+    /* ----------------------------css of kontakt page---------------------------------- */
+
+    #choosetoKontakt{
+        display: grid;
+        grid-template-rows: none;
+        grid-template-columns: repeat(2,1fr);
+        text-align: center;
+        align-items: center;
+        margin-top: 80px;
+    }
+    #choosetoKontakt .question{
+        font-size: 20px;
+    }
+    
+    #choosetoKontakt .imageLiefer img{
+        width: 45%;
+        position: absolute;
+        top: 3%;
+        left: 8%;
+    }
+    #choosetoKontakt .listOfQuestion{
+        margin-left: 15%;
+        width: 100%;
+    }
+    
+    
+    #choosetoKontakt .listOfQuestion li i{
+        padding: 45px;
+    }
+
+    #RelativeInfos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1px;
+    }
+    #RelativeInfos .infos{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 15px;
+        margin-bottom:5%;
+        width: 30%;
+        height: 280px;
+    }
+    #RelativeInfos .infos .infosText{
+        display: flex;
+        flex-direction: column;
+        font-size: 15px;
+    }
+    #RelativeInfos .infos .infosText p{
+        font-size: 13px;
+    }
+    #RelativeInfos .infos .infoChevron{
+        visibility: hidden;
+    }
+
+    #kontaktNyobe{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        background-color: #42db75;
+    }
+    #kontaktNyobe img{
+        width: 95%;
+    }
+    #kontaktNyobe .kontaktText{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        justify-content: space-between;
+        gap: 15px;
+        font-size: 15px;
+        width: 30%;
+    }
+    #kontaktNyobe .kontaktText button{
+        border-radius: 95px;
+        padding: 25px 0px;
+        color: #fff;
+        font-size: 15px;
+        background-color: #130355;
+        cursor: pointer;
+    }
+    
+
+    #hilfe{
+        display: grid;
+        grid-template-rows: none;
+        grid-template-columns: repeat(2,1fr);
+        background-color: #0d5cc4;
+        text-align: center;
+        align-items: center;
+    }
+    #hilfe img{
+        width: 50%;
+    }
+    #hilfe .imageNyotel{
+        grid-row: 1;
+    }
+    #hilfe .hilfeText{
+        font-size: 17px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 17px;
+    }
+    #hilfe .hilfeText h3{
+        color: #fff;
+        background-color: #130355;
+        padding: 20px;
+        border-radius: 25px;
+        margin: 0 10px;
+        cursor: pointer;
+    }
+    #hilfe .hilfeText h3:hover{
+        background-color: #200883;
+    }
+
+
+    #feedLocal{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+    }
+    #feedLocal .localistaion{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        font-size: 20px;
+    }
+    
+    #feedLocal .localistaion img{
+        width: 80%;
+    }
+    
+    #feedLocal .feedback{
+        font-size: 15px;
+    }
+     /* -----------------------------------css of elemWarenkorb---------------------------------- */
+     header .WarenkorbList{
+        width: 400px;
+        height: 85vh;
+        z-index: 100;
+        top: 80px;
+        left: 100%;
+        transition: all 0.3s ease;
+        margin-left: 280px;
+    }
+
+    .elemWarenkorb .Produkt .produktTop{
+        width: 60%;
+        z-index: 100;
+    }
+    .elemWarenkorb .Produkt .produktShort{
+        width: 50%;
+        margin-top: -20px;
+    }
+    
+}
+
+
+@media (min-width:1200px){
+    #Fragen .section_title::before{
+        left: 450px;
+        width: 10%;
+        height: 5px;
+        
+    }
+    #Fragen .section_title::after{
+        left: 550px;
+        width: 10%;
+        height: 5px;
+    }
+
+    #ktop{
+        position: absolute;
+        top: -320px;
+        right: 10px;
+        width: 85%;
+        z-index: 99;
+    }
+    #kshort{
+        position: absolute;
+        top: -187px;
+        right: 30px;
+        width: 65%;
+        z-index: 90;
+    }
+    #kscokets{
+        position: absolute;
+        width: 60%;
+        bottom: -70px;
+        left: 50px;
+    }
+
+
+}
+
+@media(min-width: 1280px) {
+
+    /*---------------------------@media shop seite--------------------------*/
+    .line {
+        left: 170px;
+    }
+
+    .middle-text-description h1 {
+        font-size: 5rem;
+    }
+
+    .post-header img {
+        height: 21rem;
+        width: 20rem;
+    }
+        /*------------------------------css about us---------------------------*/
+        .storySection-container .storySection-background {
+            height: 45vh;
+        }
+    
+        .storySection-container video {
+            margin-top: 5rem;
+            height: 50vh;
+        }
+        .storySection-container{
+            margin: 0 20rem;
+        }
+
+        /* -----------------------css of elemWarenkorb------------------------- */
+    header .WarenkorbList{
+        width: 500px;
+        height: 85vh;
+        z-index: 100;
+        top: 80px;
+        left: 100%;
+        transition: all 0.3s ease;
+        margin-left: 350px;
+    }
+    header .WarenkorbList .warenkorb_title{
+        font-size: 2rem;
+    }
+    header .WarenkorbList img{
+        width: 50%;
+    }
+    
+    
+    .elemWarenkorb .Produkt .allImages{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+    .elemWarenkorb .Produkt .produktTop{
+        width: 60%;
+        z-index: 100;
+    }
+    .elemWarenkorb .Produkt .produktShort{
+        width: 50%;
+        margin-top: -25px;
+    }
+    .elemWarenkorb .Produkt .produktSocket{
+        width: 50%;
+    }
+    
+}
+
+@media (min-width:1500px){
+    .logo{
+        font-size: 14px;
+    }
+
+    footer .logo{
+        width: 180px;
+    }
+    
+
+    header .logo,.elList,.search_platz{
+        margin-right: 300px;
+    }
+
+    .class{
+        margin-right: 65px;
+    }
+
+    #Fragen .section_title::before{
+        left: 590px;
+        width: 10%;
+        height: 5px;
+        
+    }
+    #Fragen .section_title::after{
+        left: 650px;
+        width: 10%;
+        height: 5px;
+    }
+    
+
+    .popup{
+        display: grid;
+        grid-template-rows: none;
+        grid-template-columns: repeat(2,1fr);
+        left: 5%;
+        width: 90%;
+        height: 70%;
+        gap:0px;
+    }
+    .popup .left_build{
+        position: relative;
+        grid-column: 1;
+        grid-row: 1/2;
+        width: 90%;
+        background-color: #42db75;
+    }
+    .popup .right_build{
+        grid-column: 2;
+        grid-row: 1/2;
+        width: 90%;
+    }
+    
+    .popup .left_build #videoBack{
+        object-fit: cover;
+    }
+    .left_build .combinaison{
+        position: absolute;
+        bottom: 30%;
+        left: 30%;
+        width: 50%;
+        padding: 20px;
+    }
+
+    .popup .right_build .colors{
+        padding: 15px;
+        background-color: #fff;
+    }
+
+    .popup .right_build .seeElems{
+        height: 70%;
+        overflow:visible;
+        overflow-y: visible;
+        flex-wrap: wrap;
+    }
+    .popup .right_build .seeElems  .imageOfElem{
+        height: 25%;
+        width: 25%;
+    }
+    .popup .right_build .seeElems  .imageOfElem img{
+        width: 100%;
+        height: 100%;
+    }
+
+    /*--------------------------------- css of warenKorb ---------------------------------*/
+    header .WarenkorbList{
+        width: 500px;
+        height: 80vh;
+        z-index: 100;
+        top: 75px;
+        left: 100%;
+        transition: all 0.3s ease;
+        margin-left: 580px;
+    }
+    header .WarenkorbList .warenkorb_title{
+        font-size: 2rem;
+    }
+    header .WarenkorbList img{
+        width: 50%;
+    }
+    
+
+
+    #ktop{
+        position: absolute;
+        top: -359px;
+        right: 18px;
+        width: 80%;
+        z-index: 99;
+    }
+    #kshort{
+        position: absolute;
+        top: -179px;
+        right: 35px;
+        width: 65%;
+        z-index: 90;
+    }
+    #kscokets{
+        position: absolute;
+        width: 70%;
+        bottom: -160px;
+        left: 50px;
+    }
+
+    /* ---------------------------------css of elemWarenkorb------------------------------------- */
+    
+    .elemWarenkorb .Produkt .allImages{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+    .elemWarenkorb .Produkt .produktTop{
+        width: 60%;
+        z-index: 100;
+    }
+    .elemWarenkorb .Produkt .produktShort{
+        width: 50%;
+        margin-top: -23px;
+    }
+    .elemWarenkorb .Produkt .produktSocket{
+        width: 50%;
+    }
+    .elemWarenkorb .Produkt .descriptionProdukt{
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+        align-items: center;
+        color: #000;
+    }
+    .elemWarenkorb .Produkt .descriptionProdukt h1{
+        font-size: 13px;
+    }
+
+    /* ------------------------------css artikel-Page--------------------------- */
+    .line {
+        left: 230px;
+    }
+
+    /* --------------------------------------------css of kontakt page------------------------- */
+
+    #choosetoKontakt{
+        display: grid;
+        grid-template-rows: none;
+        grid-template-columns: repeat(2,1fr);
+        text-align: center;
+    }
+    #choosetoKontakt .question{
+        font-size: 25px;
+    }
+    
+    #choosetoKontakt .imageLiefer img{
+        width: 32%;
+        position: absolute;
+        top: 3%;
+        left: 15%;
+    }
+    #choosetoKontakt .listOfQuestion{
+        margin-left: 15%;
+        width: 70%;
+    }
+    
+    
+    #choosetoKontakt .listOfQuestion li i{
+        padding: 45px;
+    }
+
+    #RelativeInfos{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1px;
+    }
+    #RelativeInfos .infos{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 15px;
+        margin-bottom:5%;
+        width: 30%;
+        height: 280px;
+    }
+    #RelativeInfos .infos .infosText{
+        display: flex;
+        flex-direction: column;
+        font-size: 17px;
+    }
+    #RelativeInfos .infos .infosText p{
+        font-size: 13px;
+    }
+    #RelativeInfos .infos .infoChevron{
+        visibility: hidden;
+    }
+
+    #kontaktNyobe{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        background-color: #42db75;
+    }
+    #kontaktNyobe img{
+        width: 95%;
+    }
+    #kontaktNyobe .kontaktText{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        justify-content: space-between;
+        gap: 15px;
+        font-size: 15px;
+        width: 30%;
+    }
+    #kontaktNyobe .kontaktText button{
+        border-radius: 95px;
+        padding: 25px 0px;
+        color: #fff;
+        font-size: 15px;
+        background-color: #130355;
+        cursor: pointer;
+    }
+    
+
+    #hilfe{
+        display: grid;
+        grid-template-rows: none;
+        grid-template-columns: repeat(2,1fr);
+        background-color: #0d5cc4;
+        text-align: center;
+        align-items: center;
+    }
+    #hilfe img{
+        width: 50%;
+    }
+    #hilfe .imageNyotel{
+        grid-row: 1;
+    }
+    #hilfe .hilfeText{
+        font-size: 17px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 17px;
+    }
+    #hilfe .hilfeText h3{
+        color: #fff;
+        background-color: #130355;
+        padding: 20px;
+        border-radius: 25px;
+        margin: 0 199px;
+        cursor: pointer;
+    }
+    #hilfe .hilfeText h3:hover{
+        background-color: #200883;
+    }
+
+
+    #feedLocal{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+    }
+    #feedLocal .localistaion{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        font-size: 20px;
+    }
+    
+    #feedLocal .localistaion img{
+        width: 80%;
+    }
+    
+    #feedLocal .feedback{
+        font-size: 15px;
+    }
+}
+
+@media(min-width:1900px){
+    /* ------------------------------css of pickanbuild on a homePage ----------------------------*/
+    #ktop{
+        top: -659px;
+        right: 18px;
+        width: 90%;
+        z-index: 99;
+    }
+    #kshort{
+        top: -415px;
+        right: 35px;
+        width: 75%;
+        z-index: 90;
+    }
+    #kscokets{
+        width: 80%;
+        bottom: -100px;
+        left: 30px;
+    }
+
+}
+
+

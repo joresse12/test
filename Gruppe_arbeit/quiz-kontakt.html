@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Part -->
+    <meta
+      name="keywords"
+      content="Worms, worms, webDev, Informatik, Projekt, Studium, Football, Footkick, Kits"
+    />
+    <meta
+      name="description"
+      content="Projekt webDev, Pick and Build, FootKick von KIts, Kits building"
+    />
+    <title>Home</title>
+    <!-- shortcutIcon of a page -->
+    <link
+      rel="shortcut icon"
+      href="images/soocer-removebg-preview.png"
+      type="image/png"
+    />
+    <title>Home</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap-apis für die Nutzung von Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!-- script called -->
+    <script src="script.js" async></script>
+
+</head>
+<body>
+    <!-- ----------------------------------------header ------------------------------------>
+    <header>
+      <div class="logo">
+        <a href="index.html"
+          ><h1>FOOT<span>Kick</span></h1></a
+        >
+      </div>
+      <!-- div of SuchePlatz mit seacrhBTn -->
+      <div class="search_platz">
+        <form data-testid="header-search-form" class="search_header">
+          <span class="search">
+            <input
+              type="text"
+              id="searchfield-header-input"
+              placeholder="Stichwort/Artikelnummer"
+            />
+            <button type="reset" class="button_reset_search">
+             <i class="fa-sharp fa-solid fa-xmark"></i>
+            </button>
+            <button class="button_search" type="button">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </span>
+        </form>
+      </div>
+
+      <!-- div of the list of Button_action include warenkorb button -->
+      <div class="elList">
+        <ul id="sideMenu">
+          <li><i class="fa-solid fa-xmark" onclick="closeMenu()"></i></li>
+          <li class="user">
+            <a href="login.html" class="class kunde">
+              <i class="fa-solid fa-user"></i>
+              <span class="te">Kunde</span>
+            </a>
+          </li>
+
+          <li class="schein">
+            <a href="#" class="class bestellschein">
+              <i class="fa-solid fa-receipt"></i>
+              <span class="te">Bestellschein</span>
+            </a>
+          </li>
+
+          <li class="merk">
+            <a href="#" class="class merkzettel">
+              <div class="choose_circle">
+                <i class="fa-sharp fa-solid fa-heart"></i
+                ><span class="circle">0</span>
+              </div>
+              <span class="te">Merkzettel</span>
+            </a>
+          </li>
+
+          <li class="korb">
+            <a href="#" class="class warenkorb">
+              <div class="choose_circle">
+                <i class="fa-sharp fa-solid fa-bag-shopping"></i
+                ><span class="circle">0</span>
+              </div>
+              <span class="te">Warenkorb</span>
+            </a>
+          </li>
+        </ul>
+
+        <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+      </div>
+
+      <!------------------------------- div of warenkorb ------------------------------->
+      <!------------------------------- div of warenkorb ------------------------------->
+      <div class="WarenkorbList">
+        <!-- -----------------------title of warenkorb-------------------------- -->
+        <h1 class="warenkorb_title">WARENKORB</h1>
+
+        <!-- div of elem in Warenkorb -->
+        <div class="elemWarenkorb">
+          
+        </div>
+
+        <a href="check-out.html"><h2 class="gotoKasse">
+          <i class="fa-solid fa-cash-register"></i> Jetzt Kaufen
+        </h2></a>
+      </div>
+    </header>
+    <!-- ----------------------------------------------ende header --------------------------------->
+
+    <!-----------------------------------------------Anfang Inhalt------------------------------------------->
+
+
+    <!--   Start Inhalt Seite Kontakt-->
+
+    <!--div under the header -->
+    <div class="barner-quiz">
+        <!-- text under header -->
+        <h1> Hallo !! Wie können wir dir helfen?</h1>
+    </div>
+
+    <!-- part of question in quizKontakt -->
+    <div class="row"> <!--Container of the different services-->
+      <!-- div of first service -->
+        <div class="col-about">
+          <div class="card-team">
+            <img src="images/Mein_konto.png" alt="Konto">
+            <div class="container-team">
+              <h2>kontaktiere uns </h2>
+              <p class="title-team">Kontoeinstellungen</p>
+              <p class="title-team">Anmeldungsinformationen</p>
+              <p class="title-team">Konto löschen</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-about">
+          <div class="card-team">
+            <img src="./images/verdächtiges.png" alt="Verdacht">
+            <div class="container-team">
+              <h2>Melden Etwas verdächtiges</h2>
+              <p class="title-team">Betrugsanruf </p>
+              <p class="title-team">Betrug SMS </p>
+              <p class="title-team">Fushing Email </p>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-about">
+          <div class="card-team">
+            <img src="./images/corona_co.png" alt="Corona">
+            <div class="container-team">
+              <h2>Corona Hilfe</h2>
+              <p class="title-team">Auswirkung und Bestellung </p>
+              <p class="title-team">Auswirkung und Lieferung</p>
+              <p class="title-team">Bleiblen zuhause</p>
+            </div>
+          </div>
+        </div>
+           <div class="col-about" >
+              <div class="card-team">
+                 <img src="./images/kontaktiere_uns.png" alt="Corona">
+                 <div class="container-team">
+                    <h2>Corona Hilfe</h2>
+                    <p class="title-team">Wende dich tefonisch</p>
+                    <p class="title-team">oder per Email</p>
+                    <p class="title-team">an unser Kundenserviceteam</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-about">
+            <div class="card-team">
+              <img src="./images/sup_digital.png" alt="Corona">
+              <div class="container-team">
+                <h2>Corona Hilfe</h2>
+                <p class="title-team">Hilfe für Geräte finden</p>
+                <p class="title-team">Support</p>
+                <p class="title-team">Geräte Probleme beheben</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-about">
+            <div class="card-team">
+              <img src="./images/bestellung.png" alt="Bestel" >
+              <div class="container-team">
+                <h2>Bestellungen</h2>
+                <p class="title-team">Bestellung stonieren</p>
+                <p class="title-team">Bestellung zurück</p>
+                <p class="title-team">Bestellung bearbeiten</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-about">
+            <div class="card-team">
+              <img src="./images/gut.png" alt="Gutschein" >
+              <div class="container-team">
+                <h2>Gutschein</h2>
+                <p class="title-team">Gutschein funktioniert nicht</p>
+                <p class="title-team">Gutschein anfragen</p>
+                <p class="title-team">Gutschein</p>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-about">
+            <div class="card-team">
+              <img src="./images/corona_co.png" alt="Corona">
+              <div class="container-team">
+                <h2>Corona Hilfe</h2>
+                <p class="title-team">Techniche Probleme</p>
+              </div>
+            </div>
+          </div>
+    </div>
+
+    <!-- part of LOGO und app-Download -->
+    <div class="runter-quiz">
+        <div class="logo-app">
+            <img src="./images/logo_foot.png" alt="logo-design">
+        </div>
+        <div class="runter-paragraf">
+            <h2>Download hier</h2>
+            <p class="title-team">Easy bestellen !!!!</p>
+        </div>
+    </div>
+    <!-- Ende Inhalt Kontakt Seite-->
+
+    <div class="cookies">
+        <span>Datenschutz</span>
+        <span>Nutzungsbedingungen</span>
+        <span>Impressum</span>
+    </div>
+
+    <div class="logo-footer">
+        <a href="index.html"><h1>FOOT<span>Kick</span></h1></a>
+    </div>
+
+</body>
+</html>

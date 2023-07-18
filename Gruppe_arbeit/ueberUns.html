@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO Part -->
+    <meta
+      name="keywords"
+      content="Worms, worms, webDev, Informatik, Projekt, Studium, Football, Footkick, Kits"
+    />
+    <meta
+      name="description"
+      content="Projekt webDev, Pick and Build, FootKick von KIts, Kits building"
+    />
+    <title>Ueber FootKick</title>
+    <!-- shortcutIcon of a page -->
+    <link
+      rel="shortcut icon"
+      href="images/soocer-removebg-preview.png"
+      type="image/png"
+    />
+    <link rel="stylesheet" href="style.css">
+    <!-- Bootstrap-apis für die Nutzung von Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- script called -->
+    <script src="script.js" async></script>
+
+</head>
+
+<body>
+    <!-- ----------------------------------------header ------------------------------------>
+    <header>
+      <div class="logo">
+        <a href="index.html"
+          ><h1>FOOT<span>Kick</span></h1></a
+        >
+      </div>
+      <!-- div of SuchePlatz mit seacrhBTn -->
+      <div class="search_platz">
+        <form data-testid="header-search-form" class="search_header">
+          <span class="search">
+            <input
+              type="text"
+              id="searchfield-header-input"
+              placeholder="Stichwort/Artikelnummer"
+            />
+            <button type="reset" class="button_reset_search">
+             <i class="fa-sharp fa-solid fa-xmark"></i>
+            </button>
+            <button class="button_search" type="button">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </span>
+        </form>
+      </div>
+
+      <!-- div of the list of Button_action include warenkorb button -->
+      <div class="elList">
+        <ul id="sideMenu">
+          <li><i class="fa-solid fa-xmark" onclick="closeMenu()"></i></li>
+          <li class="user">
+            <a href="login.html" class="class kunde">
+              <i class="fa-solid fa-user"></i>
+              <span class="te">Kunde</span>
+            </a>
+          </li>
+
+          <li class="schein">
+            <a href="#" class="class bestellschein">
+              <i class="fa-solid fa-receipt"></i>
+              <span class="te">Bestellschein</span>
+            </a>
+          </li>
+
+          <li class="merk">
+            <a href="#" class="class merkzettel">
+              <div class="choose_circle">
+                <i class="fa-sharp fa-solid fa-heart"></i
+                ><span class="circle">0</span>
+              </div>
+              <span class="te">Merkzettel</span>
+            </a>
+          </li>
+
+          <li class="korb">
+            <a href="#" class="class warenkorb">
+              <div class="choose_circle">
+                <i class="fa-sharp fa-solid fa-bag-shopping"></i
+                ><span class="circle">0</span>
+              </div>
+              <span class="te">Warenkorb</span>
+            </a>
+          </li>
+        </ul>
+
+        <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+      </div>
+
+      <!------------------------------- div of warenkorb ------------------------------->
+      <!------------------------------- div of warenkorb ------------------------------->
+      <div class="WarenkorbList">
+        <!-- -----------------------title of warenkorb-------------------------- -->
+        <h1 class="warenkorb_title">WARENKORB</h1>
+
+        <!-- div of elem in Warenkorb -->
+        <div class="elemWarenkorb">
+          
+        </div>
+
+        <a href="check-out.html"><h2 class="gotoKasse">
+          <i class="fa-solid fa-cash-register"></i> Jetzt Kaufen
+        </h2></a>
+      </div>
+    </header>
+    <!-- ----------------------------------------------ende header --------------------------------->
+
+    <!-----------------------------------------------Anfang Inhalt------------------------------------------->
+
+
+    <main>
+      <!-- container of infos about us -->
+        <div class="aboutUs-Container">
+          <!-- story about the team -->
+            <div class="storySection-container">
+                <div class="storySection-background">
+                   
+                </div>
+                <div class="storySection-heading">
+                    <span class="story-text">Die Story hinten FOOT<span>Kick</span></span>
+                    <div class="storySection-image">
+                      <!-- video about us, maked with Canvas -->
+                        <video autoplay loop muted>
+                            <source src="about__vid.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <!-- Our Story -->
+                <div class="storySection-storytext">
+                    <div class="textstory story1">
+                        <span class="text-heading">2014</span>
+                        <p class="textVariant-Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
+                            Suspendisse lectus tortor, dignissim sit amet,
+                            adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa,
+                            varius a, semper congue,
+                            euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum
+                            diam nisl sit amet
+                            erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim.
+                            Pellentesque congue. Ut in risus
+                            volutpat libero pharetra tempor. Cras vestibulum bibendum augue. 
+                        </p>
+                    </div>
+                    <div class="textstory">
+                        <span class="text-heading">Heute</span>
+                        <p class="textVariant-Text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus.
+                            Suspendisse lectus tortor, dignissim sit
+                            amet,
+                            adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa,
+                            varius a, semper congue,
+                            euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum
+                            diam nisl sit amet
+                            erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim.
+                            Pellentesque congue. Ut in
+                            risus
+                            volutpat libero pharetra tempor. Cras vestibulum bibendum augue.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- conatiner our sales and revenue -->
+            <section class="Container-container">
+                <div class="ContentWrapper">
+                    <div class="Numer-section-heading">
+                        <p class="text-variantDisplay">Unsere <span class="text-zahl">Zahlen</span></p>
+                        <span class="textVariant-Text">Von einem Kreativen für Kreative gegründet. Jede unserer
+                            Entscheidungen dient einem einzigen Ziel – der Bezahlung von
+                            Kreativen.</span>
+                    </div>
+                    <div class="NumberSectionNumber">
+                        <div class="NumberSection-description">
+                            <span class="text-variantDisplay NumberSection_subhead">Über acht Millionen monatlich aktive
+                                FootKicks</span>
+                            <span class="textVariant-Text">FootKicks unterstützen die Kreativen, die sie mögen.</span>
+                        </div>
+                        <div class="NumberSection-description">
+                            <span class="text-variantDisplay NumberSection_subhead">Über 250.000 Kreative auf FootKick</span>
+                            <span class="textVariant-Text">Unsere Plattform bietet Tausenden von Kreativen die Gelegenheit,
+                                zu ihren eigenen Outfit kreativ tätig zu sein.</span>
+                        </div>
+                        <div class="NumberSection-description">
+                            <span class="text-variantDisplay NumberSection_subhead">3,5 Milliarden US-Dollar an Kreative
+                                ausgezahlt</span>
+                            <span class="textVariant-Text">Seit 2013 haben wir über 3,5 Milliarden US-Dollar an Kreative auf
+                                Footkick ausgezahlt.</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Our motivations -->
+            <div class="guideSection-container">
+                <span class="text-variantDisplay">Was uns treibt an?</span>
+                <div class="guideSection-guides grid">
+                    <div class="guideSection-description flex1">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M20 22V4c0-1.103-.897-2-2-2H6c-1.103 0-2 .897-2 2v18l8-4.572L20 22zM6 10V4h12v14.553l-6-3.428-6 3.428V10z">
+                            </path>
+                            <path
+                                d="M15.409 9.512c.361-.372.585-.888.585-1.456s-.223-1.083-.585-1.456a1.962 1.962 0 0 0-1.412-.603S13.001 5.994 12 7.026c-1.001-1.032-1.997-1.029-1.997-1.029-.552 0-1.051.23-1.412.603-.362.373-.585.887-.585 1.456s.223 1.084.585 1.456L12 13.203l3.409-3.691z">
+                            </path>
+                        </svg>
+
+                        <span>Unsere Handlungsgrundsätze</span>
+                        <p class="textVariant-Text">Ut velit mauris, egestas sed, gravida nec, ornare ut, mi. Aenean ut orci
+                            vel massa suscipit pulvinar. Nulla
+                            sollicitudin. Fusce varius, ligula non tempus aliquam, nunc turpis ullamcorper nibh, in tempus
+                            sapien eros vitae ligula.
+                            Pellentesque rhoncus nunc et augue. Integer id felis. Curabitur aliquet pellentesque diam.
+                            Integer quis metus vitae elit
+                            lobortis egestas. Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+                        <button>Mehr dazu findest du hier</button>
+                    </div>
+
+                    <div class="guideSection-description flex">
+                      <!-- link dafür : https://icon-sets.iconify.design/bx/run/ -->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
+                            <circle cx="17" cy="4" r="2"></circle>
+                            <path
+                                d="M15.777 10.969a2.007 2.007 0 0 0 2.148.83l3.316-.829-.483-1.94-3.316.829-1.379-2.067a2.01 2.01 0 0 0-1.272-.854l-3.846-.77a1.998 1.998 0 0 0-2.181 1.067l-1.658 3.316 1.789.895 1.658-3.317 1.967.394L7.434 17H3v2h4.434c.698 0 1.355-.372 1.715-.971l1.918-3.196 5.169 1.034 1.816 5.449 1.896-.633-1.815-5.448a2.007 2.007 0 0 0-1.506-1.33l-3.039-.607 1.772-2.954.417.625z">
+                            </path>
+                        </svg>
+
+                        <span>Unsere Mission</span>
+                        <p class="textVariant-Text">Ut velit mauris, egestas sed, gravida nec, ornare ut, mi. Aenean ut orci
+                            vel massa suscipit pulvinar. Nulla
+                            sollicitudin. Fusce varius, ligula non tempus aliquam, nunc turpis ullamcorper nibh, in tempus
+                            sapien eros vitae
+                            ligula.
+                            Pellentesque rhoncus nunc et augue. Integer id felis. Curabitur aliquet pellentesque diam.
+                            Integer quis metus vitae
+                            elit
+                            lobortis egestas. Lorem ipsum dolor sit amet, consectetuer adipiscing elit</p>
+                        <button>Offene Stellenangebote anzeigen</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+    <!-- footer -->
+    <footer>
+        <!-- obere row -->
+        <div class="top">
+          <!-- first column -->
+          <div class="col first">
+            <div class="logo">
+              <a href="index.html"
+                ><h1>FOOT<span>Kick</span></h1></a
+              >
+            </div>
+  
+            <div class="user_ort">
+              <i class="fa-sharp fa-solid fa-location-dot"></i>
+              <span class="ort">Germany</span>
+            </div>
+  
+            <ul class="list firstCol">
+              <li><a href="#">Gutscheinkarten</a></li>
+              <li><a href="#">KITS Kataloge</a></li>
+              <li>
+                <a href="#">Offiziellen <span>FOOTKICK</span> Store finden</a>
+              </li>
+            </ul>
+          </div>
+          <!-- second column -->
+          <div class="col second">
+            <div class="title"><h1>über uns</h1></div>
+            <ul class="list secondCol">
+              <li>
+                <a href="ueberUns.html">Über die <span>FOOTKICK</span> Gruppe</a>
+              </li>
+              <li><a href="#">FOOTKICK News</a></li>
+              <li><a href="#">Lieferkettentransparenz</a></li>
+              <li>
+                <a href="#">Jobs bei der <span>FOOTKICK</span> Gruppe</a>
+              </li>
+            </ul>
+          </div>
+          <!-- third column -->
+          <div class="col third">
+            <div class="title"><h1>support</h1></div>
+            <ul class="list thirdCol">
+              <li><a href="kontaktFirst.html#choosetoKontakt">Kontakt</a></li>
+              <li><a href="#">Bauanleitungen</a></li>
+              <li><a href="#">Fehlende Teile</a></li>
+              <li><a href="#">Lieferung und Rückgabe</a></li>
+              <li><a href="#">Impressum</a></li>
+            </ul>
+          </div>
+          <!-- 4th column -->
+          <div class="col fourth">
+            <div class="title"><h1>ATTRAKTONEN</h1></div>
+            <ul class="list thirdCol">
+              <li>
+                <a href="#"><span>FOOTKICK</span> HOUSE</a>
+              </li>
+              <li>
+                <a href="#"><span>FOOTKICKLAND</span> Parks</a>
+              </li>
+            </ul>
+          </div>
+          <!-- 5. column -->
+          <div class="col fiveth">
+            <div class="title"><h1>mehr über uns</h1></div>
+            <ul class="list thirdCol">
+              <li>
+                <a href="#"><span>FOOTKICK</span> LIFE</a>
+              </li>
+              <li>
+                <a href="#"><span>FOOTKICKLAND</span> Education</a>
+              </li>
+              <li>
+                <a href="#"><span>FOOTKICKLAND</span> Ideas</a>
+              </li>
+              <li>
+                <a href="#"><span>FOOTKICKLAND</span> Foundation</a>
+              </li>
+              <li><a href="#">Verbundprogramm</a></li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- mittlere row -->
+        <div class="mittel">
+          <!-- marketing e-mail abonnement -->
+          <div class="marketing_mail_abo">
+            <h1>marketing-e-mails abonnieren</h1>
+            <form data-testid="email-abonnieren" class="abo_email">
+              <span class="abo-mail">
+                <input
+                  type="text"
+                  id="email_abo_input"
+                  placeholder="Deine E-Mail-Adresse"
+                />
+                <button class="button_validate" type="button">
+                  <i class="fa-solid fa-chevron-right"></i>
+                </button>
+              </span>
+            </form>
+          </div>
+  
+          <!-- social media div -->
+          <div class="social_media">
+            <h1>folge uns</h1>
+            <ul class="list_media">
+              <li>
+                <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+  
+        <!-- letzte Elemente der Footer -->
+        <div class="bottom_footer">
+          <!-- div von Utilitäten -->
+          <div class="utitaet">
+            <ul class="list_utili">
+              <li><a href="#">Datenschutz</a></li>
+              <li><a href="#">Cookies</a></li>
+              <li><a href="#">Rechtliche Hinweise</a></li>
+              <li><a href="#">Nutzungsbedingungen</a></li>
+              <li><a href="#">Barrierefreiheit</a></li>
+              <li><a href="#">Cookie-Einstellungen</a></li>
+            </ul>
+          </div>
+          <!-- div copyright -->
+          <div class="copyright">
+            <p>
+              <i class="fa-sharp fa-solid fa-copyright"></i
+              ><span class="date"></span> The <span>FOOTKICK</span> Group. Alle
+              Rechte vorbehalten. Durch die Verwendung dieser Webseite stimmen Sie
+              den Nutzungsbedingungen zu.
+            </p>
+          </div>
+        </div>
+      </footer>
+
+</body>
+
+</html>

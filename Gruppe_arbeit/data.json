@@ -1,0 +1,387 @@
+[
+    {
+        "id":"wt1",
+        "color":"white",
+        "url":"images/top/witeredTop1-removebg-preview.png",
+        "description":"Sport-Outfit mit w-shirt",
+        "part":"top",
+        "price":20
+    },
+    {
+        "id":"wt2",
+        "color":"white",
+        "url":"images/top/wbtop.png",
+        "description":"Sport-Outfit mit w-shirt",
+        "part":"top",
+        "price":20
+    },
+    {
+        "id":"wt3",
+        "color":"white",
+        "url":"images/top/topwhite-removebg-preview.png",
+        "description":"Sport-Outfit mit w-shirt",
+        "part":"top",
+        "price":20
+    },
+    {
+        "id":"wt4",
+        "color":"white",
+        "url":"images/top/TopLwihite-removebg-preview.png",
+        "description":"Sport-Outfit mit w-shirt",
+        "part":"top",
+        "price":20
+    },
+    {
+        "id":"bkt1",
+        "color":"black",
+        "url":"images/top/wblatop1-removebg-preview.png",
+        "description":"Sport-Outfit mit bk-shirt",
+        "part":"top",
+        "price":20
+    },
+    {
+        "id":"bkt2",
+        "color":"black",
+        "url":"images/top/topLwhitel-removebg-preview.png",
+        "description":"Sport-Outfit mit bk-shirt",
+        "part":"top",
+        "price":20
+    },
+    {
+        "id":"bkt3",
+        "color":"black",
+        "url":"images/top/balckwhiTop1-removebg-preview.png",
+        "description":"Sport-Outfit mit bk-shirt",
+        "part":"top",
+        "price":20
+    },
+    {
+        "id":"bkt4",
+        "color":"black",
+        "url":"images/top/blackredTop1-removebg-preview.png",
+        "description":"Sport-Outfit mit bk-shirt",
+        "part":"top",
+        "price":20
+    },
+    {
+        "id":"bkt5",
+        "color":"black",
+        "url":"images/top/mitreBlackwihtTop2-removebg-preview.png",
+        "description":"Sport-Outfit mit bk-shirt",
+        "part":"top",
+        "price":20
+    },
+    {
+        "id":"bkt6",
+        "color":"black",
+        "url":"images/top/mitreBlackwihtTop3-removebg-preview.png",
+        "description":"Sport-Outfit mit bk-shirt",
+        "part":"top",
+        "price":20
+    },
+    {
+        "id":"bkt6",
+        "color":"black",
+        "url":"images/top/mitreBlackwihtTop4-removebg-preview.png",
+        "description":"Sport-Outfit mit bk-shirt",
+        "part":"top",
+        "price":20
+    },
+    {
+        "id":"rt1",
+        "color":"red",
+        "url":"images/top/mitreRedbluTop1-removebg-preview.png",
+        "description":"Sport-Outfit mit r-shirt",
+        "part":"top",
+        "price":20
+    },
+    {
+        "id":"rt2",
+        "color":"red",
+        "url":"images/top/mitreRedbluTop2-removebg-preview.png",
+        "description":"Sport-Outfit mit r-shirt",
+        "part":"top",
+        "price":20
+    },
+    {
+        "id":"rt3",
+        "color":"red",
+        "url":"images/top/rTop-removebg-preview.png",
+        "description":"Sport-Outfit mit r-shirt",
+        "part":"top",
+        "price":20
+    },
+    {
+        "id":"rt4",
+        "color":"red",
+        "url":"images/top/rwtop1-removebg-preview.png",
+        "description":"Sport-Outfit mit r-shirt",
+        "part":"top",
+        "price":20
+    },
+    {
+        "id":"rt5",
+        "color":"red",
+        "url":"images/top/toprb-removebg-preview.png",
+        "description":"Sport-Outfit mit r-shirt",
+        "part":"top",
+        "price":20
+    },
+    {
+        "id":"bt1",
+        "color":"blue",
+        "url":"images/top/topBlue-removebg-preview.png",
+        "description":"Sport-Outfit mit bl-shirt",
+        "part":"top",
+        "price":20
+    },
+    {
+        "id":"bt2",
+        "color":"blue",
+        "url":"images/top/topLBl-removebg-preview.png",
+        "description":"Sport-Outfit mit bl-shirt",
+        "part":"top",
+        "price":20
+    },
+    {
+        "id":"bt3",
+        "color":"blue",
+        "url":"images/top/topLBlue-removebg-preview.png",
+        "description":"Sport-Outfit mit bl-shirt",
+        "part":"top",
+        "price":20
+    },
+    {
+        "id":"ws3",
+        "color":"white",
+        "url":"images/short/whredshort1-removebg-preview.png",
+        "description":"and w-short",
+        "part":"short",
+        "price":20
+    },
+    {
+        "id":"ws3",
+        "color":"white",
+        "url":"images/short/whredshort1-removebg-preview.png",
+        "description":"and w-short",
+        "part":"short",
+        "price":20
+    },
+    {
+        "id":"ws3",
+        "color":"white",
+        "url":"images/short/whredshort1-removebg-preview.png",
+        "description":"and w-short",
+        "part":"short",
+        "price":20
+    },
+    {
+        "id":"ws3",
+        "color":"white",
+        "url":"images/short/whredshort1-removebg-preview.png",
+        "description":"and w-short",
+        "part":"short",
+        "price":20
+    },
+    {
+        "id":"rs2",
+        "color":"red",
+        "url":"images/short/rshort-removebg-preview.png",
+        "description":"and r-short",
+        "part":"short",
+        "price":20
+    },
+    {
+        "id":"rs2",
+        "color":"red",
+        "url":"images/short/rshort-removebg-preview.png",
+        "description":"and r-short",
+        "part":"short",
+        "price":20
+    },
+    {
+        "id":"rs2",
+        "color":"red",
+        "url":"images/short/rshort-removebg-preview.png",
+        "description":"and r-short",
+        "part":"short",
+        "price":20
+    },
+    {
+        "id":"rs2",
+        "color":"red",
+        "url":"images/short/rshort-removebg-preview.png",
+        "description":"and r-short",
+        "part":"short",
+        "price":20
+    },
+    {
+        "id":"bs2",
+        "color":"blue",
+        "url":"images/short/blshort2-removebg-preview.png",
+        "description":"and bl-short",
+        "part":"short",
+        "price":20
+    },
+    {
+        "id":"bs2",
+        "color":"blue",
+        "url":"images/short/blshort2-removebg-preview.png",
+        "description":"and bl-short",
+        "part":"short",
+        "price":20
+    },
+    {
+        "id":"bs2",
+        "color":"blue",
+        "url":"images/short/blshort2-removebg-preview.png",
+        "description":"and bl-short",
+        "part":"short",
+        "price":20
+    },
+    {
+        "id":"bs2",
+        "color":"blue",
+        "url":"images/short/blshort2-removebg-preview.png",
+        "description":"and bl-short",
+        "part":"short",
+        "price":20
+    },
+    {
+        "id":"bs2",
+        "color":"blue",
+        "url":"images/short/blshort2-removebg-preview.png",
+        "description":"and bl-short",
+        "part":"short",
+        "price":20
+    },
+    {
+        "id":"bls1",
+        "color":"black",
+        "url":"images/short/blRshort-removebg-preview.png",
+        "description":"and bk-short",
+        "part":"short",
+        "price":20
+    },
+    {
+        "id":"bls1",
+        "color":"black",
+        "url":"images/short/blRshort-removebg-preview.png",
+        "description":"and bk-short",
+        "part":"short",
+        "price":20
+    },
+    {
+        "id":"bls2",
+        "color":"black",
+        "url":"images/short/blshort-removebg-preview.png",
+        "description":"and bk-short",
+        "part":"short",
+        "price":20
+    },
+    {
+        "id":"bls2",
+        "color":"black",
+        "url":"images/short/blshort-removebg-preview.png",
+        "description":"and bk-short",
+        "part":"short",
+        "price":20
+    },
+    {
+        "id":"wsk1",
+        "color":"white",
+        "url":"images/sockets/wsock1.png",
+        "description":"and w-Socket",
+        "part":"socket",
+        "price":20
+    },
+    {
+        "id":"wsk1",
+        "color":"white",
+        "url":"images/sockets/wsock1.png",
+        "description":"and w-Socket",
+        "part":"socket",
+        "price":20
+    },
+    {
+        "id":"wsk1",
+        "color":"white",
+        "url":"images/sockets/wsock1.png",
+        "description":"and w-Socket",
+        "part":"socket",
+        "price":20
+    },
+    {
+        "id":"rsk1",
+        "color":"red",
+        "url":"images/sockets/rsock1.png",
+        "description":"and r-Socket",
+        "part":"socket",
+        "price":20
+    },
+    {
+        "id":"rsk1",
+        "color":"red",
+        "url":"images/sockets/rsock1.png",
+        "description":"and r-Socket",
+        "part":"socket",
+        "price":20
+    },
+    {
+        "id":"rsk1",
+        "color":"red",
+        "url":"images/sockets/rsock1.png",
+        "description":"and r-Socket",
+        "part":"socket",
+        "price":20
+    },
+    {
+        "id":"bkt1",
+        "color":"blue",
+        "url":"images/sockets/bsock1.png",
+        "description":"and bl-Socket",
+        "part":"socket",
+        "price":20
+    },
+    {
+        "id":"bkt1",
+        "color":"blue",
+        "url":"images/sockets/bsock1.png",
+        "description":"and bl-Socket",
+        "part":"socket",
+        "price":20
+    },
+    {
+        "id":"bkt1",
+        "color":"blue",
+        "url":"images/sockets/bsock1.png",
+        "description":"and bl-Socket",
+        "part":"socket",
+        "price":20
+    },
+    {
+        "id":"blkt1",
+        "color":"black",
+        "url":"images/sockets/blsock1.png",
+        "description":"and bk-Socket",
+        "part":"socket",
+        "price":20
+    },
+    {
+        "id":"blkt1",
+        "color":"black",
+        "url":"images/sockets/blsock1.png",
+        "description":"and bk-Socket",
+        "part":"socket",
+        "price":20
+    },
+    {
+        "id":"blkt1",
+        "color":"black",
+        "url":"images/sockets/blsock1.png",
+        "description":"and bk-Socket",
+        "part":"socket",
+        "price":20
+        
+    }
+]
