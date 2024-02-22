@@ -1,2 +1,3 @@
 ## test
-[![Build Status]()]()
+- How to run it
+    -git clone 
